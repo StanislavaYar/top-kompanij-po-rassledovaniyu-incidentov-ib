@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><title>webp</title>
+<script>
+// PNG 1440x900 -> WebP 1200x750 (та же пропорция, без обрезки). Результат в <pre id="out-slug"> для --dump-dom.
+var slugs=['paranoid-security','f6','solar','bi-zone','kaspersky','rtm-group','kredo-s','positive-technologies','ussc','bastion'];
+Promise.all(slugs.map(function(s){return new Promise(function(res){var i=new Image();i.onload=function(){var c=document.createElement('canvas');c.width=1200;c.height=750;var x=c.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(i,0,0,1200,750);var p=document.createElement('pre');p.id='out-'+s;p.textContent=c.toDataURL('image/webp',0.82);document.body.appendChild(p);res();};i.onerror=function(){res();};i.src=(new URLSearchParams(location.search).get('src')||'')+'/'+s+'.png';});})).then(function(){document.title='done';});
+</script>

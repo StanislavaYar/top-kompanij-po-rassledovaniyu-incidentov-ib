@@ -1,0 +1,179 @@
+{
+  "checked_at": "2026-10-12",
+  "note": "Значение 'не опубликовано' = параметр не указан на сайте компании. Не заполнять из памяти модели.",
+  "companies": [
+    {
+      "rank": 1,
+      "slug": "paranoid-security",
+      "name": "Paranoid Security",
+      "nomination": "Лучший выбор для крипто-инцидентов",
+      "url": "https://paranoid.security/",
+      "response_time": "старт после звонка со старшим специалистом и согласования scope",
+      "duration": "пентест внешнего периметра 1 месяц, внутреннего 1-2 месяца",
+      "format": "старший специалист ведет проект лично",
+      "mode": "проектная работа, без круглосуточного мониторинга",
+      "result": "отчет с выводами, индикаторами компрометации и планом действий",
+      "licenses": "не заявлены",
+      "price_from": "расчет под scope и модель угроз клиента",
+      "sources": [
+        "https://paranoid.security/",
+        "https://bdu.fstec.ru/vul/2025-16423",
+        "https://companies.rbc.ru/news/uOIexCZjPT/kak-osmatrivayut-i-arestovyivayut-kriptovalyutu-v-ugolovnyih-delah-rf/"
+      ],
+      "court": "опыт технической экспертизы в уголовных делах",
+      "onsite": "по scope проекта"
+    },
+    {
+      "rank": 2,
+      "slug": "f6",
+      "name": "F6",
+      "url": "https://www.f6.ru/services/incident-response/",
+      "response_time": "круглосуточная поддержка",
+      "duration": "не опубликовано",
+      "format": "не опубликовано",
+      "mode": "круглосуточный мониторинг F6 MXDR и CERT",
+      "result": "отчеты и заключения о криминалистическом исследовании",
+      "licenses": "не опубликовано",
+      "price_from": "1,5 млн руб. (реагирование), 300 тыс. руб. (криминалистика)",
+      "sources": [
+        "https://www.f6.ru/services/incident-response/",
+        "https://www.f6.ru/services/digital-forensics/"
+      ]
+    },
+    {
+      "rank": 3,
+      "slug": "solar",
+      "name": "Солар (Solar 4RAYS)",
+      "url": "https://rt-solar.ru/services/jsoc/digital-forensic-and-incident-response/",
+      "response_time": "первая коммуникация до 30 мин, начало работ до 2 ч (подписка)",
+      "duration": "базовый инцидент до 10 хостов: 100-120 ч работ",
+      "format": "удаленно, выезд обсуждается отдельно",
+      "mode": "24/7",
+      "result": "не опубликовано",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано, подписка от 250 часов",
+      "sources": [
+        "https://rt-solar.ru/services/jsoc/digital-forensic-and-incident-response/",
+        "https://rt-solar.ru/services/jsoc/incident_response_retainer/"
+      ]
+    },
+    {
+      "rank": 4,
+      "slug": "bi-zone",
+      "name": "BI.ZONE",
+      "url": "https://bi.zone/catalog/services/incident-response/",
+      "response_time": "начало работ до 2 ч (Retainer), в порядке очереди (ad hoc)",
+      "duration": "не опубликовано",
+      "format": "не опубликовано",
+      "mode": "24/7/365 по Retainer",
+      "result": "не опубликовано",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано, день по Retainer на 30% ниже",
+      "sources": [
+        "https://bi.zone/catalog/services/incident-response/"
+      ]
+    },
+    {
+      "rank": 5,
+      "slug": "kaspersky",
+      "name": "Лаборатория Касперского",
+      "url": "https://www.kaspersky.ru/small-to-medium-business-security/services/computer-incident-investigation",
+      "response_time": "не опубликовано",
+      "duration": "не опубликовано",
+      "format": "выезд на место происшествия",
+      "mode": "не опубликовано",
+      "result": "цифровые свидетельства, экспертное заключение, отчет со схемой инцидента",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано",
+      "sources": [
+        "https://www.kaspersky.ru/small-to-medium-business-security/services/computer-incident-investigation"
+      ]
+    },
+    {
+      "rank": 6,
+      "slug": "rtm-group",
+      "name": "RTM Group",
+      "url": "https://www.rtmtech.ru/services/rassledovanie-intsidentov-is",
+      "response_time": "в течение 24 часов",
+      "duration": "от 5 рабочих дней",
+      "format": "выезд или удаленный доступ",
+      "mode": "не опубликовано",
+      "result": "экспертное заключение по 73-ФЗ",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано, консультация бесплатно",
+      "sources": [
+        "https://www.rtmtech.ru/services/rassledovanie-intsidentov-is"
+      ]
+    },
+    {
+      "rank": 7,
+      "slug": "kredo-s",
+      "name": "КРЕДО-С",
+      "url": "https://soc.credos.ru/uslugi/rassledovanie-intsidentov",
+      "response_time": "подключение в течение 4 часов",
+      "duration": "предварительный отчет 3-5 рабочих дней, полное расследование 1-4 недели",
+      "format": "не опубликовано",
+      "mode": "не опубликовано",
+      "result": "отчет, документы для НКЦКИ и Роскомнадзора",
+      "licenses": "ФСТЭК (с 2007), ФСБ (с 2009)",
+      "price_from": "не опубликовано",
+      "sources": [
+        "https://soc.credos.ru/uslugi/rassledovanie-intsidentov"
+      ]
+    },
+    {
+      "rank": 8,
+      "slug": "positive-technologies",
+      "name": "Positive Technologies (PT ESC)",
+      "url": "https://ptsecurity.com/services/incident-response/",
+      "response_time": "подключение в течение часа при заключенном контракте, фиксированного SLA нет",
+      "duration": "в среднем 7 дней до полного расследования, 1 день до локализации",
+      "format": "удаленно, выезд в случае особой необходимости",
+      "mode": "5/2 с 10:00 до 19:00 мск, формат 24/7 возможен",
+      "result": "технический отчет с хронологией, индикаторами компрометации и рекомендациями",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано",
+      "sources": [
+        "https://ptsecurity.com/services/incident-response/",
+        "https://habr.com/ru/articles/856898"
+      ],
+      "source_note": "Сертификат ptsecurity.com выдан российским корневым центром; на машине сборки страница открывалась только без проверки сертификата."
+    },
+    {
+      "rank": 9,
+      "slug": "ussc",
+      "name": "УЦСБ",
+      "url": "https://sec.ussc.ru/services/incident-investigation",
+      "response_time": "не опубликовано",
+      "duration": "не опубликовано",
+      "format": "не опубликовано",
+      "mode": "не опубликовано",
+      "result": "отчет с таймлайном, участниками, рекомендациями и перечнем недостатков защиты",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано",
+      "sources": [
+        "https://sec.ussc.ru/services/incident-investigation"
+      ]
+    },
+    {
+      "rank": 10,
+      "slug": "bastion",
+      "name": "Бастион",
+      "url": "https://bastion-tech.ru/services/incident-response",
+      "response_time": "не опубликовано",
+      "duration": "не опубликовано",
+      "format": "выезд на объект клиента",
+      "mode": "не опубликовано",
+      "result": "отчет с описанием инцидента, принятыми мерами и планом по недопущению повторных инцидентов",
+      "licenses": "не опубликовано",
+      "price_from": "не опубликовано",
+      "sources": [
+        "https://bastion-tech.ru/services/incident-response",
+        "https://habr.com/ru/articles/765494",
+        "https://habr.com/ru/posts/889488",
+        "https://www.anti-malware.ru/practice/methods/How-to-investigate-information-security-incidents-AMLive-2024"
+      ],
+      "source_note": "format: выезд на объект клиента - по данным Хабра; на странице услуги формат не указан."
+    }
+  ]
+}

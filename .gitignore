@@ -1,0 +1,19 @@
+# Входные данные пайплайна: хранятся вне репозитория
+brief/
+brand-consensus*
+entity-analysis*
+*.tz.md
+tz-*.md
+stitch_/
+
+# Локальная настройка инструментов
+CLAUDE.md
+settings.json
+.claude/
+
+# Рабочие файлы
+_source/
+temporary screenshots/
+*.log
+Thumbs.db
+desktop.ini

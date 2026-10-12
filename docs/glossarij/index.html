@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Глоссарий: термины расследования инцидентов ИБ</title>
+<meta name="description" content="36 терминов расследования инцидентов ИБ: от атрибуции и DFIR до цепочки хранения доказательств и эксфильтрации. Короткие определения с примерами.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Рейтинг IR-компаний">
+<meta property="og:title" content="Глоссарий: термины расследования инцидентов ИБ">
+<meta property="og:description" content="36 терминов расследования инцидентов ИБ: от атрибуции и DFIR до цепочки хранения доказательств и эксфильтрации. Короткие определения с примерами.">
+<meta property="og:url" content="https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/">
+<meta property="og:image" content="https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/assets/img/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script type="application/ld+json">
+{
+   "@context" : "https://schema.org",
+   "@graph" : [
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#publisher",
+         "@type" : "Organization",
+         "email" : "editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com",
+         "logo" : {
+            "@type" : "ImageObject",
+            "height" : 512,
+            "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/icon-512.png",
+            "width" : 512
+         },
+         "name" : "Рейтинг IR-компаний",
+         "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/"
+      },
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#website",
+         "@type" : "WebSite",
+         "inLanguage" : "ru",
+         "name" : "Рейтинг IR-компаний",
+         "publisher" : {
+            "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#publisher"
+         },
+         "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/"
+      },
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#editorial",
+         "@type" : "Organization",
+         "name" : "Редакция рейтинга",
+         "parentOrganization" : {
+            "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#publisher"
+         },
+         "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/redakciya/"
+      },
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#webpage",
+         "@type" : "WebPage",
+         "dateModified" : "2026-10-12",
+         "description" : "36 терминов расследования инцидентов ИБ: от атрибуции и DFIR до цепочки хранения доказательств и эксфильтрации. Короткие определения с примерами.",
+         "inLanguage" : "ru",
+         "isPartOf" : {
+            "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#website"
+         },
+         "mainEntity" : {
+            "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#terms"
+         },
+         "name" : "Глоссарий: термины расследования инцидентов ИБ",
+         "publisher" : {
+            "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/#publisher"
+         },
+         "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/"
+      },
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#breadcrumbs",
+         "@type" : "BreadcrumbList",
+         "itemListElement" : [
+            {
+               "@type" : "ListItem",
+               "item" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/",
+               "name" : "Рейтинг",
+               "position" : 1
+            },
+            {
+               "@type" : "ListItem",
+               "item" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/",
+               "name" : "Глоссарий",
+               "position" : 2
+            }
+         ]
+      },
+      {
+         "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#terms",
+         "@type" : "DefinedTermSet",
+         "hasDefinedTerm" : [
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Атрибуция - это этап анализа, который связывает инцидент с известной группой злоумышленников по инструментам и техникам атаки. Атрибуция помогает предсказать следующие шаги атакующего и закрыть его типовые каналы входа.",
+               "name" : "Атрибуция",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#atribuciya"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Бэкдор - это скрытый механизм доступа, который злоумышленник оставляет в системе для повторного входа. Поиск бэкдоров входит в оценку масштаба инцидента перед восстановлением систем.",
+               "name" : "Бэкдор",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#bekdor"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Вектор атаки - это путь, по которому злоумышленник проник в инфраструктуру: фишинговое письмо, уязвимый внешний сервис, украденный пароль. Установление вектора атаки входит в обязательный результат любого расследования.",
+               "name" : "Вектор атаки",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#vektor-ataki"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Вредоносное программное обеспечение - это программа, которая выполняет действия злоумышленника: шифрует файлы, крадет данные или дает удаленный доступ. Анализ ВПО показывает возможности атакующего и индикаторы для поиска заражения.",
+               "name" : "Вредоносное программное обеспечение (ВПО)",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#vredonosnoe-programmnoe-obespechenie-vpo"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.",
+               "name" : "Веб-шелл",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#veb-shell"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "ГосСОПКА - это государственная система обнаружения, предупреждения и ликвидации последствий компьютерных атак на информационные ресурсы РФ. Субъекты КИИ передают сведения об инцидентах в ГосСОПКА через НКЦКИ.",
+               "name" : "ГосСОПКА",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#gossopka"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Дамп памяти - это копия содержимого оперативной памяти компьютера на момент снятия. Дамп памяти сохраняет запущенные процессы, сетевые соединения и следы бесфайлового ВПО, которые исчезают при перезагрузке.",
+               "name" : "Дамп памяти",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#damp-pamyati"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Закрепление - это действия злоумышленника, которые сохраняют доступ после перезагрузки или смены паролей: новые учетные записи, службы, задачи планировщика. Не найденное закрепление приводит к повторной атаке.",
+               "name" : "Закрепление",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#zakreplenie"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Индикаторы компрометации - это технические признаки атаки: хэши вредоносных файлов, IP-адреса и домены серверов управления. Отчет о расследовании передает IoC в SIEM и EDR для поиска заражения на других узлах.",
+               "name" : "Индикаторы компрометации (IoC)",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#indikatory-komprometacii-ioc"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Инцидент ИБ - это событие или серия событий, которые нарушают конфиденциальность, целостность или доступность информации. Инцидент ИБ требует реагирования, а иногда и уведомления регулятора.",
+               "name" : "Инцидент ИБ",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#incident-ib"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Компьютерная криминалистика - это дисциплина, которая собирает и исследует цифровые доказательства так, чтобы их можно было использовать в суде. Синонимы: форензика, цифровая криминалистика. Подробнее в гайде Компьютерная криминалистика.",
+               "name" : "Компьютерная криминалистика",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#kompyuternaya-kriminalistika"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Компьютерный инцидент - это термин 187-ФЗ и ГОСТ Р 59712-2022 для нарушения или прекращения функционирования объекта КИИ или нарушения безопасности обрабатываемой в нем информации. На практике термин совпадает с инцидентом ИБ.",
+               "name" : "Компьютерный инцидент",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#kompyuternyj-incident"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Критическая информационная инфраструктура - это информационные системы и сети организаций в энергетике, связи, финансах, здравоохранении и других сферах из 187-ФЗ. Субъекты КИИ обязаны информировать НКЦКИ о компьютерных инцидентах.",
+               "name" : "Критическая информационная инфраструктура (КИИ)",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#kriticheskaya-informacionnaya-infrastruktura-kii"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Национальный координационный центр по компьютерным инцидентам (НКЦКИ) - это центр ФСБ России, который принимает сведения об инцидентах от субъектов КИИ. Приказ ФСБ № 282 устанавливает срок информирования 3 часа для значимых объектов и 24 часа для иных.",
+               "name" : "НКЦКИ",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#nkcki"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Образ диска - это побитовая копия носителя, которая сохраняет файлы, удаленные данные и служебные структуры файловой системы. Эксперт исследует образ диска, а оригинал остается неизменным.",
+               "name" : "Образ диска",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#obraz-diska"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Реагирование на инциденты - это комплекс действий, который останавливает атаку, ограничивает ущерб и восстанавливает работу систем. Реагирование идет параллельно с расследованием, но решает другую задачу.",
+               "name" : "Реагирование на инциденты",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#reagirovanie-na-incidenty"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Ретейнер (Incident Response Retainer) - это договор с подрядчиком, который резервирует часы экспертов и фиксирует срок начала работ. По подписке Солар и BI.ZONE начинают работы до 2 часов после обращения.",
+               "name" : "Ретейнер",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#retejner"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Событие ИБ - это зафиксированная активность в информационной системе, которая может указывать на проблему безопасности. Событие ИБ становится инцидентом после подтверждения нарушения.",
+               "name" : "Событие ИБ",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#sobytie-ib"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Таймлайн атаки - это хронология действий злоумышленника от первого проникновения до обнаружения. Таймлайн собирается из журналов, событий EDR, изменений файловой системы и сетевых соединений.",
+               "name" : "Таймлайн атаки",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#tajmlajn-ataki"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Триаж - это первичная оценка инцидента, которая определяет затронутые системы, данные под угрозой и срочность реагирования. Триаж задает приоритеты для команды в первые часы работы.",
+               "name" : "Триаж",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#triazh"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Утечка персональных данных - это неправомерная передача или распространение персональных данных. Оператор уведомляет Роскомнадзор об утечке в течение 24 часов, о результатах расследования в течение 72 часов. Подробнее в гайде Утечка персональных данных.",
+               "name" : "Утечка персональных данных",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#utechka-personalnyh-dannyh"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Хэш-сумма - это короткое значение, которое вычисляется из содержимого файла и меняется при любом изменении данных. Хэш-сумма доказывает, что доказательство не изменялось после сбора.",
+               "name" : "Хэш-сумма",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#hesh-summa"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Цепочка хранения доказательств - это документ, который фиксирует, кто, когда и куда передавал носитель с цифровыми доказательствами. Цепочка хранения сохраняет юридическую силу улик в суде.",
+               "name" : "Цепочка хранения доказательств",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#cepochka-hraneniya-dokazatelstv"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Шифровальщик - это вредоносная программа, которая шифрует файлы и требует выкуп за ключ расшифровки. Расследование атаки шифровальщика проверяет, выгрузили ли злоумышленники данные до шифрования.",
+               "name" : "Шифровальщик",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#shifrovalshchik"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Эксфильтрация - это выгрузка данных из инфраструктуры компании на ресурсы злоумышленника. Подтверждение эксфильтрации определяет, нужно ли уведомлять Роскомнадзор об утечке.",
+               "name" : "Эксфильтрация",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#eksfiltraciya"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "APT (Advanced Persistent Threat) - это группа злоумышленников, которая проводит длительные целевые атаки и долго остается в инфраструктуре незамеченной. По исследованию PT ESC за 2021-2023 годы, 40% расследованных инцидентов связаны с известными APT-группировками (Хабр).",
+               "name" : "APT",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#apt"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "CSIRT (Computer Security Incident Response Team) - это команда реагирования на инциденты ИБ внутри организации. CSIRT координирует реагирование и привлекает внешних подрядчиков при сложных атаках.",
+               "name" : "CSIRT",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#csirt"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "DFIR (Digital Forensics and Incident Response) - это сочетание компьютерной криминалистики и реагирования на инциденты в одной услуге. Солар называет свою услугу расследования и реагирования именно DFIR.",
+               "name" : "DFIR",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#dfir"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "EDR (Endpoint Detection and Response) - это система, которая записывает события на рабочих станциях и серверах и блокирует подозрительные действия. Данные EDR служат одним из главных источников для таймлайна атаки.",
+               "name" : "EDR",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#edr"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "MITRE ATT&CK - это открытая база тактик и техник злоумышленников, которую используют в отчетах о расследовании. Привязка действий атакующего к техникам ATT&CK делает отчеты разных компаний сопоставимыми.",
+               "name" : "MITRE ATT&CK",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#mitre-att-ck"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "NTA (Network Traffic Analysis) - это система анализа сетевого трафика, которая выявляет аномальные соединения и выгрузку данных. Записи NTA помогают подтвердить или опровергнуть эксфильтрацию.",
+               "name" : "NTA",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#nta"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "SIEM (Security Information and Event Management) - это система, которая собирает и сопоставляет события безопасности со всей инфраструктуры. Сигнал SIEM часто запускает расследование.",
+               "name" : "SIEM",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#siem"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "SOAR (Security Orchestration, Automation and Response) - это платформа, которая автоматизирует типовые действия реагирования по сценариям. SOAR ускоряет изоляцию хостов и блокировку учетных записей.",
+               "name" : "SOAR",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#soar"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "SOC (Security Operations Center) - это центр мониторинга, который круглосуточно выявляет инциденты ИБ. SOC обнаруживает атаку, а глубокое расследование чаще проводит отдельная команда DFIR.",
+               "name" : "SOC",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#soc"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "Threat Intelligence - это данные о группировках, их инфраструктуре и техниках, которые помогают обнаружить и атрибутировать атаку. Солар и Лаборатория Касперского используют собственные базы Threat Intelligence в расследованиях.",
+               "name" : "Threat Intelligence",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#threat-intelligence"
+            },
+            {
+               "@type" : "DefinedTerm",
+               "description" : "XDR (Extended Detection and Response) - это развитие EDR, которое объединяет данные с рабочих станций, сети, почты и облака. XDR дает расследованию единую картину событий из разных источников.",
+               "name" : "XDR",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#xdr"
+            }
+         ],
+         "name" : "Глоссарий: термины расследования инцидентов ИБ"
+      }
+   ]
+}
+</script>
+</head>
+<body>
+<a class="ir-skip" href="#main">Перейти к содержанию</a>
+<header class="ir-header" role="banner">
+<div class="ir-wrap ir-header__in">
+<a class="ir-logo" href="../"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="6" fill="#0B1F3A"/><path d="M16 5.5 7.5 9v6.2c0 5.3 3.6 9.4 8.5 11.3 4.9-1.9 8.5-6 8.5-11.3V9Z" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-linejoin="round"/><circle cx="15" cy="14.5" r="3.6" fill="none" stroke="#0EA5A4" stroke-width="2"/><path d="m17.7 17.2 3 3" stroke="#0EA5A4" stroke-width="2" stroke-linecap="round"/></svg><span>Рейтинг IR-компаний</span></a>
+<nav class="ir-nav" role="navigation" aria-label="Основное меню">
+<ul>
+<li><a href="../">Рейтинг</a></li>
+<li><a href="../metodologiya/">Методология</a></li>
+<li><details class="ir-dd"><summary>Гайды <svg class="ir-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li><a href="../kompyuternaya-kriminalistika/">Компьютерная криминалистика</a></li><li><a href="../chto-delat-pri-incidente-ib/">Что делать при инциденте ИБ</a></li><li><a href="../utechka-personalnyh-dannyh-uvedomlenie-rkn/">Утечка персональных данных: уведомление РКН</a></li><li><a href="../rassledovanie-krazhi-kriptovalyuty/">Расследование кражи криптовалюты</a></li></ul></details></li>
+<li><a href="../o-proekte/">О проекте</a></li>
+</ul>
+</nav>
+<details class="ir-mnav">
+<summary aria-label="Открыть меню"><svg class="ir-ico ir-ico--menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg><svg class="ir-ico ir-ico--x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></summary>
+<nav class="ir-mnav__panel" aria-label="Меню">
+<ul>
+<li><a href="../">Рейтинг</a></li>
+<li><a href="../metodologiya/">Методология</a></li>
+<li><p class="ir-mnav__group">Гайды</p><ul><li><a href="../kompyuternaya-kriminalistika/">Компьютерная криминалистика</a></li><li><a href="../chto-delat-pri-incidente-ib/">Что делать при инциденте ИБ</a></li><li><a href="../utechka-personalnyh-dannyh-uvedomlenie-rkn/">Утечка персональных данных: уведомление РКН</a></li><li><a href="../rassledovanie-krazhi-kriptovalyuty/">Расследование кражи криптовалюты</a></li></ul></li>
+<li><a href="../o-proekte/">О проекте</a></li>
+</ul>
+</nav>
+</details>
+</div>
+</header>
+<main id="main" class="ir-main">
+<div class="ir-wrap">
+<article class="ir-article ir-narrow">
+<nav class="ir-crumbs" aria-label="Хлебные крошки"><ol><li><a href="../">Рейтинг</a></li><li aria-current="page">Глоссарий</li></ol></nav>
+<header class="ir-intro">
+<h1>Глоссарий: термины расследования инцидентов ИБ</h1>
+<div class="ir-byline">
+<div class="ir-byline__who"><svg class="ir-avatar" viewBox="0 0 64 64" role="img" aria-label="Редакция рейтинга"><rect width="64" height="64" rx="8" fill="#0B1F3A"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#1E3A5F" stroke-width="2" transform="rotate(45 32 32)"/><g class="ir-avatar__turn"><rect x="19" y="19" width="26" height="26" rx="1.5" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-dasharray="20 6"/></g><rect x="27" y="27" width="10" height="10" rx="1" fill="#0EA5A4" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="2" fill="#0B1F3A"/></svg><div><a class="ir-byline__name" href="../redakciya/">Редакция рейтинга</a><br><span class="ir-byline__date">Обновлено: <time datetime="2026-10-12">12.10.2026</time></span></div></div>
+</div>
+<nav aria-label="Алфавитный указатель"><ul class="ir-az">
+<li><a href="#atribuciya">А</a></li><li><a href="#bekdor">Б</a></li><li><a href="#vektor-ataki">В</a></li><li><a href="#gossopka">Г</a></li><li><a href="#damp-pamyati">Д</a></li><li><a href="#zakreplenie">З</a></li><li><a href="#indikatory-komprometacii-ioc">И</a></li><li><a href="#kompyuternaya-kriminalistika">К</a></li><li><a href="#nkcki">Н</a></li><li><a href="#obraz-diska">О</a></li><li><a href="#reagirovanie-na-incidenty">Р</a></li><li><a href="#sobytie-ib">С</a></li><li><a href="#tajmlajn-ataki">Т</a></li><li><a href="#utechka-personalnyh-dannyh">У</a></li><li><a href="#hesh-summa">Х</a></li><li><a href="#cepochka-hraneniya-dokazatelstv">Ц</a></li><li><a href="#shifrovalshchik">Ш</a></li><li><a href="#eksfiltraciya">Э</a></li><li><a href="#apt">A</a></li><li><a href="#csirt">C</a></li><li><a href="#dfir">D</a></li><li><a href="#edr">E</a></li><li><a href="#mitre-att-ck">M</a></li><li><a href="#nta">N</a></li><li><a href="#siem">S</a></li><li><a href="#threat-intelligence">T</a></li><li><a href="#xdr">X</a></li>
+</ul></nav>
+<p class="ir-lead">Глоссарий объясняет 36 терминов, которые встречаются в отчетах о расследовании инцидентов ИБ и в договорах с подрядчиками. Определения опираются на <a href="https://files.stroyinf.ru/Index/79/79276.htm" target="_blank" rel="noopener">ГОСТ Р 59712-2022</a>, <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" target="_blank" rel="noopener">NIST SP 800-61</a> и <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank" rel="noopener">152-ФЗ</a>.</p>
+</header>
+<section class="ir-sec" id="russkie-terminy" aria-labelledby="russkie-terminy-h">
+<h2 id="russkie-terminy-h">Русские термины</h2>
+<div class="ir-term" id="atribuciya">
+<h3>Атрибуция</h3>
+<p>Атрибуция - это этап анализа, который связывает инцидент с известной группой злоумышленников по инструментам и техникам атаки. Атрибуция помогает предсказать следующие шаги атакующего и закрыть его типовые каналы входа.</p>
+</div>
+<div class="ir-term" id="bekdor">
+<h3>Бэкдор</h3>
+<p>Бэкдор - это скрытый механизм доступа, который злоумышленник оставляет в системе для повторного входа. Поиск бэкдоров входит в оценку масштаба инцидента перед восстановлением систем.</p>
+</div>
+<div class="ir-term" id="vektor-ataki">
+<h3>Вектор атаки</h3>
+<p>Вектор атаки - это путь, по которому злоумышленник проник в инфраструктуру: фишинговое письмо, уязвимый внешний сервис, украденный пароль. Установление вектора атаки входит в обязательный результат любого расследования.</p>
+</div>
+<div class="ir-term" id="vredonosnoe-programmnoe-obespechenie-vpo">
+<h3>Вредоносное программное обеспечение (ВПО)</h3>
+<p>Вредоносное программное обеспечение - это программа, которая выполняет действия злоумышленника: шифрует файлы, крадет данные или дает удаленный доступ. Анализ ВПО показывает возможности атакующего и индикаторы для поиска заражения.</p>
+</div>
+<div class="ir-term" id="veb-shell">
+<h3>Веб-шелл</h3>
+<p>Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.</p>
+</div>
+<div class="ir-term" id="gossopka">
+<h3>ГосСОПКА</h3>
+<p>ГосСОПКА - это государственная система обнаружения, предупреждения и ликвидации последствий компьютерных атак на информационные ресурсы РФ. Субъекты КИИ передают сведения об инцидентах в ГосСОПКА через НКЦКИ.</p>
+</div>
+<div class="ir-term" id="damp-pamyati">
+<h3>Дамп памяти</h3>
+<p>Дамп памяти - это копия содержимого оперативной памяти компьютера на момент снятия. Дамп памяти сохраняет запущенные процессы, сетевые соединения и следы бесфайлового ВПО, которые исчезают при перезагрузке.</p>
+</div>
+<div class="ir-term" id="zakreplenie">
+<h3>Закрепление</h3>
+<p>Закрепление - это действия злоумышленника, которые сохраняют доступ после перезагрузки или смены паролей: новые учетные записи, службы, задачи планировщика. Не найденное закрепление приводит к повторной атаке.</p>
+</div>
+<div class="ir-term" id="indikatory-komprometacii-ioc">
+<h3>Индикаторы компрометации (IoC)</h3>
+<p>Индикаторы компрометации - это технические признаки атаки: хэши вредоносных файлов, IP-адреса и домены серверов управления. Отчет о расследовании передает IoC в SIEM и EDR для поиска заражения на других узлах.</p>
+</div>
+<div class="ir-term" id="incident-ib">
+<h3>Инцидент ИБ</h3>
+<p>Инцидент ИБ - это событие или серия событий, которые нарушают конфиденциальность, целостность или доступность информации. Инцидент ИБ требует реагирования, а иногда и уведомления регулятора.</p>
+</div>
+<div class="ir-term" id="kompyuternaya-kriminalistika">
+<h3>Компьютерная криминалистика</h3>
+<p>Компьютерная криминалистика - это дисциплина, которая собирает и исследует цифровые доказательства так, чтобы их можно было использовать в суде. Синонимы: форензика, цифровая криминалистика. Подробнее в гайде <a href="../kompyuternaya-kriminalistika/">Компьютерная криминалистика</a>.</p>
+</div>
+<div class="ir-term" id="kompyuternyj-incident">
+<h3>Компьютерный инцидент</h3>
+<p>Компьютерный инцидент - это термин 187-ФЗ и ГОСТ Р 59712-2022 для нарушения или прекращения функционирования объекта КИИ или нарушения безопасности обрабатываемой в нем информации. На практике термин совпадает с инцидентом ИБ.</p>
+</div>
+<div class="ir-term" id="kriticheskaya-informacionnaya-infrastruktura-kii">
+<h3>Критическая информационная инфраструктура (КИИ)</h3>
+<p>Критическая информационная инфраструктура - это информационные системы и сети организаций в энергетике, связи, финансах, здравоохранении и других сферах из <a href="https://www.consultant.ru/document/cons_doc_LAW_220885/" target="_blank" rel="noopener">187-ФЗ</a>. Субъекты КИИ обязаны информировать НКЦКИ о компьютерных инцидентах.</p>
+</div>
+<div class="ir-term" id="nkcki">
+<h3>НКЦКИ</h3>
+<p>Национальный координационный центр по компьютерным инцидентам (НКЦКИ) - это центр ФСБ России, который принимает сведения об инцидентах от субъектов КИИ. Приказ ФСБ № 282 устанавливает срок информирования 3 часа для значимых объектов и 24 часа для иных.</p>
+</div>
+<div class="ir-term" id="obraz-diska">
+<h3>Образ диска</h3>
+<p>Образ диска - это побитовая копия носителя, которая сохраняет файлы, удаленные данные и служебные структуры файловой системы. Эксперт исследует образ диска, а оригинал остается неизменным.</p>
+</div>
+<div class="ir-term" id="reagirovanie-na-incidenty">
+<h3>Реагирование на инциденты</h3>
+<p>Реагирование на инциденты - это комплекс действий, который останавливает атаку, ограничивает ущерб и восстанавливает работу систем. Реагирование идет параллельно с расследованием, но решает другую задачу.</p>
+</div>
+<div class="ir-term" id="retejner">
+<h3>Ретейнер</h3>
+<p>Ретейнер (Incident Response Retainer) - это договор с подрядчиком, который резервирует часы экспертов и фиксирует срок начала работ. По подписке Солар и BI.ZONE начинают работы до 2 часов после обращения.</p>
+</div>
+<div class="ir-term" id="sobytie-ib">
+<h3>Событие ИБ</h3>
+<p>Событие ИБ - это зафиксированная активность в информационной системе, которая может указывать на проблему безопасности. Событие ИБ становится инцидентом после подтверждения нарушения.</p>
+</div>
+<div class="ir-term" id="tajmlajn-ataki">
+<h3>Таймлайн атаки</h3>
+<p>Таймлайн атаки - это хронология действий злоумышленника от первого проникновения до обнаружения. Таймлайн собирается из журналов, событий EDR, изменений файловой системы и сетевых соединений.</p>
+</div>
+<div class="ir-term" id="triazh">
+<h3>Триаж</h3>
+<p>Триаж - это первичная оценка инцидента, которая определяет затронутые системы, данные под угрозой и срочность реагирования. Триаж задает приоритеты для команды в первые часы работы.</p>
+</div>
+<div class="ir-term" id="utechka-personalnyh-dannyh">
+<h3>Утечка персональных данных</h3>
+<p>Утечка персональных данных - это неправомерная передача или распространение персональных данных. Оператор уведомляет Роскомнадзор об утечке в течение 24 часов, о результатах расследования в течение 72 часов. Подробнее в гайде <a href="../utechka-personalnyh-dannyh-uvedomlenie-rkn/">Утечка персональных данных</a>.</p>
+</div>
+<div class="ir-term" id="hesh-summa">
+<h3>Хэш-сумма</h3>
+<p>Хэш-сумма - это короткое значение, которое вычисляется из содержимого файла и меняется при любом изменении данных. Хэш-сумма доказывает, что доказательство не изменялось после сбора.</p>
+</div>
+<div class="ir-term" id="cepochka-hraneniya-dokazatelstv">
+<h3>Цепочка хранения доказательств</h3>
+<p>Цепочка хранения доказательств - это документ, который фиксирует, кто, когда и куда передавал носитель с цифровыми доказательствами. Цепочка хранения сохраняет юридическую силу улик в суде.</p>
+</div>
+<div class="ir-term" id="shifrovalshchik">
+<h3>Шифровальщик</h3>
+<p>Шифровальщик - это вредоносная программа, которая шифрует файлы и требует выкуп за ключ расшифровки. Расследование атаки шифровальщика проверяет, выгрузили ли злоумышленники данные до шифрования.</p>
+</div>
+<div class="ir-term" id="eksfiltraciya">
+<h3>Эксфильтрация</h3>
+<p>Эксфильтрация - это выгрузка данных из инфраструктуры компании на ресурсы злоумышленника. Подтверждение эксфильтрации определяет, нужно ли уведомлять Роскомнадзор об утечке.</p>
+</div>
+</section>
+<section class="ir-sec" id="anglijskie-terminy-i-abbreviatury" aria-labelledby="anglijskie-terminy-i-abbreviatury-h">
+<h2 id="anglijskie-terminy-i-abbreviatury-h">Английские термины и аббревиатуры</h2>
+<div class="ir-term" id="apt">
+<h3>APT</h3>
+<p>APT (Advanced Persistent Threat) - это группа злоумышленников, которая проводит длительные целевые атаки и долго остается в инфраструктуре незамеченной. По исследованию PT ESC за 2021-2023 годы, 40% расследованных инцидентов связаны с известными APT-группировками (<a href="https://habr.com/ru/articles/774060" target="_blank" rel="noopener">Хабр</a>).</p>
+</div>
+<div class="ir-term" id="csirt">
+<h3>CSIRT</h3>
+<p>CSIRT (Computer Security Incident Response Team) - это команда реагирования на инциденты ИБ внутри организации. CSIRT координирует реагирование и привлекает внешних подрядчиков при сложных атаках.</p>
+</div>
+<div class="ir-term" id="dfir">
+<h3>DFIR</h3>
+<p>DFIR (Digital Forensics and Incident Response) - это сочетание компьютерной криминалистики и реагирования на инциденты в одной услуге. Солар называет свою услугу расследования и реагирования именно DFIR.</p>
+</div>
+<div class="ir-term" id="edr">
+<h3>EDR</h3>
+<p>EDR (Endpoint Detection and Response) - это система, которая записывает события на рабочих станциях и серверах и блокирует подозрительные действия. Данные EDR служат одним из главных источников для таймлайна атаки.</p>
+</div>
+<div class="ir-term" id="mitre-att-ck">
+<h3>MITRE ATT&amp;CK</h3>
+<p>MITRE ATT&amp;CK - это открытая база тактик и техник злоумышленников, которую используют в отчетах о расследовании. Привязка действий атакующего к техникам ATT&amp;CK делает отчеты разных компаний сопоставимыми.</p>
+</div>
+<div class="ir-term" id="nta">
+<h3>NTA</h3>
+<p>NTA (Network Traffic Analysis) - это система анализа сетевого трафика, которая выявляет аномальные соединения и выгрузку данных. Записи NTA помогают подтвердить или опровергнуть эксфильтрацию.</p>
+</div>
+<div class="ir-term" id="siem">
+<h3>SIEM</h3>
+<p>SIEM (Security Information and Event Management) - это система, которая собирает и сопоставляет события безопасности со всей инфраструктуры. Сигнал SIEM часто запускает расследование.</p>
+</div>
+<div class="ir-term" id="soar">
+<h3>SOAR</h3>
+<p>SOAR (Security Orchestration, Automation and Response) - это платформа, которая автоматизирует типовые действия реагирования по сценариям. SOAR ускоряет изоляцию хостов и блокировку учетных записей.</p>
+</div>
+<div class="ir-term" id="soc">
+<h3>SOC</h3>
+<p>SOC (Security Operations Center) - это центр мониторинга, который круглосуточно выявляет инциденты ИБ. SOC обнаруживает атаку, а глубокое расследование чаще проводит отдельная команда DFIR.</p>
+</div>
+<div class="ir-term" id="threat-intelligence">
+<h3>Threat Intelligence</h3>
+<p>Threat Intelligence - это данные о группировках, их инфраструктуре и техниках, которые помогают обнаружить и атрибутировать атаку. Солар и Лаборатория Касперского используют собственные базы Threat Intelligence в расследованиях.</p>
+</div>
+<div class="ir-term" id="xdr">
+<h3>XDR</h3>
+<p>XDR (Extended Detection and Response) - это развитие EDR, которое объединяет данные с рабочих станций, сети, почты и облака. XDR дает расследованию единую картину событий из разных источников.</p>
+</div>
+<p>Термины используются в <a href="../">рейтинге компаний по расследованию инцидентов ИБ</a> и в гайде <a href="../chto-delat-pri-incidente-ib/">Что делать при инциденте ИБ</a>.</p>
+</section>
+</article>
+</div>
+</main>
+<footer class="ir-footer" role="contentinfo">
+<div class="ir-wrap">
+<div class="ir-footer__cols">
+<div>
+<p class="ir-footer__title">Рейтинг</p>
+<ul>
+<li><a href="../">Топ компаний по расследованию инцидентов ИБ</a></li>
+<li><a href="../metodologiya/">Методология рейтинга</a></li>
+</ul>
+</div>
+<div>
+<p class="ir-footer__title">Гайды</p>
+<ul>
+<li><a href="../kompyuternaya-kriminalistika/">Компьютерная криминалистика</a></li>
+<li><a href="../chto-delat-pri-incidente-ib/">Что делать при инциденте ИБ</a></li>
+<li><a href="../utechka-personalnyh-dannyh-uvedomlenie-rkn/">Утечка персональных данных: уведомление РКН</a></li>
+<li><a href="../rassledovanie-krazhi-kriptovalyuty/">Расследование кражи криптовалюты</a></li>
+</ul>
+</div>
+<div>
+<p class="ir-footer__title">О проекте</p>
+<ul>
+<li><a href="../o-proekte/">О проекте</a></li>
+<li><a href="../redakciya/">Редакция</a></li>
+<li><a href="../redakcionnaya-politika/">Редакционная политика</a></li>
+<li><a href="../glossarij/">Глоссарий</a></li>
+</ul>
+</div>
+<div>
+<p class="ir-footer__title">Связь</p>
+<ul>
+<li><a href="../kontakty/">Контакты</a></li>
+<li><a href="../dobavit-kompaniyu/">Добавить компанию</a></li>
+<li><a href="../politika-konfidencialnosti/">Политика конфиденциальности</a></li>
+</ul>
+<p class="ir-footer__note">Иконки: <a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>, лицензия ISC. Шрифты: Inter и JetBrains Mono, лицензия <a href="../assets/fonts/OFL-LICENSE.txt">SIL Open Font License 1.1</a>.</p>
+</div>
+</div>
+<div class="ir-footer__bottom">
+<p>Рейтинг IR-компаний, 2026. Данные проверены 12.10.2026.</p>
+<p>Логотипы и названия компаний являются товарными знаками их владельцев.</p>
+</div>
+</div>
+</footer>
+<script src="../assets/js/ui.js" defer></script>
+</body>
+</html>
