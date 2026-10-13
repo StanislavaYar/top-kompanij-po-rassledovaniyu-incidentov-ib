@@ -324,7 +324,9 @@ sub c_grid {
   for my $it (@{ $b->{items} }) {
     my ($lead, $rest) = split_lead($it);
     my $ic = icon(icon_for($lead));
-    $h .= "<li>$ic<div><span class=\"ir-grid__lead\">" . inl($lead) . '</span>' . ($rest ne '' ? '<p>' . inl($rest) . '</p>' : '') . "</div></li>\n";
+    my $lead_html = inl($lead);
+    $lead_html =~ s/\.$//;   # заголовок карточки стоит отдельной строкой: завершающая точка не нужна (? остается)
+    $h .= "<li>$ic<div><span class=\"ir-grid__lead\">" . $lead_html . '</span>' . ($rest ne '' ? '<p>' . inl($rest) . '</p>' : '') . "</div></li>\n";
   }
   return "$h</ul>\n";
 }
