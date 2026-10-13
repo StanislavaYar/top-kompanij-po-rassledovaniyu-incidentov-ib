@@ -675,7 +675,6 @@ sub header_html {
   my $mark = logo_mark();
   my $ddcur = $nav eq 'guides' ? ' is-current' : '';
   return <<"HTML";
-<a class="ir-skip" href="#main">Перейти к содержанию</a>
 <header class="ir-header" role="banner">
 <div class="ir-wrap ir-header__in">
 <a class="ir-logo" href="$home">$mark<span>$SITE_NAME</span></a>
@@ -844,7 +843,7 @@ for my $page (@PAGES) {
     for my $n (0 .. $#parts) {
       if ($n == 0) { $crumbs .= qq{<li><a href="$home">} . esc($parts[$n]) . '</a></li>'; }
       elsif ($n == $#parts) { $crumbs .= '<li aria-current="page">' . esc($parts[$n]) . '</li>'; }
-      else { $crumbs .= '<li>' . esc($parts[$n]) . '</li>'; }
+      # промежуточные элементы без своей страницы (например, "Гайды") не выводятся
     }
     $crumbs .= "</ol></nav>\n";
   }

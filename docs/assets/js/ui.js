@@ -41,7 +41,6 @@
   btn.addEventListener('click', function (ev) {
     ev.preventDefault();
     window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-    var skip = document.querySelector('.ir-skip');
-    if (skip) skip.focus({ preventScroll: true });
+    btn.blur();
   });
 })();

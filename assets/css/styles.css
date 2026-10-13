@@ -566,3 +566,17 @@ h3 { font-size: 18px; line-height: 26px; }
 .ir-timeline > li:last-child::after { display: none; }
 .ir-scale__end { font-family: var(--ir-sans); font-size: 15px; line-height: 22px; letter-spacing: 0; }
 .ir-rank thead th:nth-child(1) { font-family: var(--ir-sans); font-weight: 600; }
+
+/* Карточки компаний: скриншот на всю ширину сверху в одинаковой рамке, определение под ним.
+   Все скриншоты 1200x623, поэтому блок одинаковый во всех 10 карточках. */
+.ir-card__top { display: block; border-bottom: 0; }
+.ir-card__shot { margin: 0; padding: 16px 18px 0; background: transparent; border: 0; height: auto; }
+.ir-card__shot img { width: 100%; height: auto; aspect-ratio: 1200 / 623; object-fit: contain; border: 1px solid var(--ir-line); border-radius: var(--ir-r); background: var(--ir-tint); }
+.ir-card__lede { padding: 16px 18px 0; }
+.ir-card__lede .ir-card__def { margin-bottom: 0; }
+.ir-card__body { padding-top: 16px; }
+@media (min-width: 1024px) {
+  .ir-card__top { display: block; }
+  .ir-card__shot { border-right: 0; align-self: auto; }
+  .ir-card__lede { padding: 16px 18px 0; align-self: auto; }
+}

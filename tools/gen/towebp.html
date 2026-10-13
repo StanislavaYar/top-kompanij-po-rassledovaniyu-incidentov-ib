@@ -1,16 +1,19 @@
 <!doctype html><meta charset="utf-8"><title>webp</title>
 <script>
 // Скриншоты -> WebP единого размера 1200x623 БЕЗ обрезки: картинка вписывается целиком (по ширине,
-// а если выше рамки - по высоте), свободное место снизу заполняется продолжением нижнего ряда пикселей (бесшовно).
+// а если выше рамки - по высоте), свободное место снизу заливается основным (самым частым) цветом нижнего края.
 // Результат в <pre id="out-slug"> для --dump-dom. ?src=папка_исходников (file://)
 var W=1200,H=623;
+// Скриншоты, которые растягиваются до рамки по высоте вместо добивки (не больше 5%): f6 992->1033 px.
+var STRETCH=['f6'];
 var slugs=['paranoid-security','f6','solar','bi-zone','kaspersky','rtm-group','kredo-s','positive-technologies','ussc','bastion'];
 var src=new URLSearchParams(location.search).get('src')||'';
+function modeColor(img){var c=document.createElement('canvas');c.width=img.naturalWidth;c.height=1;var x=c.getContext('2d');x.drawImage(img,0,img.naturalHeight-1,img.naturalWidth,1,0,0,img.naturalWidth,1);var d=x.getImageData(0,0,img.naturalWidth,1).data,m={},best=null,bn=0;for(var i=0;i<d.length;i+=4){var k=(d[i]>>3)+','+(d[i+1]>>3)+','+(d[i+2]>>3);m[k]=(m[k]||0)+1;if(m[k]>bn){bn=m[k];best=[d[i],d[i+1],d[i+2]];}}return 'rgb('+best.join(',')+')';}
 function edgeColor(img,bottom){var c=document.createElement('canvas');c.width=img.naturalWidth;c.height=1;var x=c.getContext('2d');x.drawImage(img,0,bottom?img.naturalHeight-1:0,img.naturalWidth,1,0,0,img.naturalWidth,1);var d=x.getImageData(0,0,img.naturalWidth,1).data,r=0,g=0,b=0,n=0;for(var i=0;i<d.length;i+=4){r+=d[i];g+=d[i+1];b+=d[i+2];n++;}return 'rgb('+Math.round(r/n)+','+Math.round(g/n)+','+Math.round(b/n)+')';}
 function load(s,exts){return new Promise(function(res){if(!exts.length)return res(null);var i=new Image();i.onload=function(){res(i)};i.onerror=function(){load(s,exts.slice(1)).then(res)};i.src=src+'/'+s+'.'+exts[0];});}
 Promise.all(slugs.map(function(s){return load(s,['webp','png']).then(function(i){if(!i)return;
   var c=document.createElement('canvas');c.width=W;c.height=H;var x=c.getContext('2d');x.imageSmoothingQuality='high';
-  var k=Math.min(W/i.naturalWidth,H/i.naturalHeight);var w=Math.round(i.naturalWidth*k),h=Math.round(i.naturalHeight*k);
-  x.fillStyle=edgeColor(i,true);x.fillRect(0,0,W,H);var ox=Math.round((W-w)/2);x.drawImage(i,0,0,i.naturalWidth,i.naturalHeight,ox,0,w,h);if(h<H){x.drawImage(i,0,i.naturalHeight-1,i.naturalWidth,1,ox,h,w,H-h);}
+  var k=Math.min(W/i.naturalWidth,H/i.naturalHeight);var w=Math.round(i.naturalWidth*k),h=Math.round(i.naturalHeight*k);if(STRETCH.indexOf(s)>=0){w=W;h=H;}
+  x.fillStyle=modeColor(i);x.fillRect(0,0,W,H);var ox=Math.round((W-w)/2);x.drawImage(i,0,0,i.naturalWidth,i.naturalHeight,ox,0,w,h);
   var p=document.createElement('pre');p.id='out-'+s;p.textContent=c.toDataURL('image/webp',0.85);p.dataset.info=i.naturalWidth+'x'+i.naturalHeight+' -> '+w+'x'+h+' pad '+(H-h);document.body.appendChild(p);});})).then(function(){document.title='done';});
 </script>
