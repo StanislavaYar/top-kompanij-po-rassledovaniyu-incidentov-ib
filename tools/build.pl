@@ -14,8 +14,8 @@ my $DOMAIN    = 'https://top-kompanij-po-rassledovaniyu-incidentov-ib.com';
 my $DATE      = '2026-10-20';
 my $DATE_RU   = '20.10.2026';
 my $SITE_NAME = 'Рейтинг IR-компаний';
-my $EDITORIAL = 'Редакция рейтинга';
-my $EMAIL     = 'editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com';
+my $EDITORIAL = 'Аналитическая группа рейтинга';
+my $EMAIL     = 'research@top-kompanij-po-rassledovaniyu-incidentov-ib.com';
 my $ROBOTS    = 'noindex, nofollow';
 my $OG_IMAGE  = "$DOMAIN/assets/img/og/og-default.png";
 my $PUBLIC    = $ENV{PUBLIC_DIR} // "docs";   # папка публикации (готовый сайт, GitHub Pages: main /docs)
@@ -104,6 +104,7 @@ my %ICON = (
   'plus-square'   => '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/>',
   'target'        => '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
   'info'          => '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
+  'activity'      => '<path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/>',
 );
 sub icon {
   my ($name, $cls) = @_;
@@ -113,6 +114,7 @@ sub icon {
 }
 # Иконка по смыслу заголовка пункта
 my @ICON_RULES = (
+  [qr/\[SIEM\]/, 'activity'], [qr/\[EDR\]/, 'cpu'], [qr/\[NTA\]/, 'network'], [qr/\[SOAR\]/, 'zap'], [qr/\[DLP\]/, 'lock'], [qr/\[Threat Intelligence\]/, 'target'],
   [qr/вектор/i, 'log-in'], [qr/инструмент/i, 'wrench'], [qr/какие системы/i, 'server'], [qr/ущерб/i, 'database'],
   [qr/продолжается/i, 'eye'], [qr/когда началась/i, 'clock'], [qr/кто причаст/i, 'users'], [qr/почему атака/i, 'shield-alert'],
   [qr/официальн/i, 'globe'], [qr/ссылка у каждого|ссылка\./i, 'link'], [qr/^обновлени/i, 'refresh-cw'],
@@ -398,7 +400,7 @@ sub c_tools_para {
 sub avatar {
   my ($size) = @_;
   my $cls = $size eq 'lg' ? 'ir-avatar ir-avatar--lg' : 'ir-avatar';
-  return qq{<svg class="$cls" viewBox="0 0 64 64" role="img" aria-label="Редакция рейтинга"><rect width="64" height="64" rx="8" fill="#0B1F3A"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#1E3A5F" stroke-width="2" transform="rotate(45 32 32)"/><g class="ir-avatar__turn"><rect x="19" y="19" width="26" height="26" rx="1.5" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-dasharray="20 6"/></g><rect x="27" y="27" width="10" height="10" rx="1" fill="#0EA5A4" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="2" fill="#0B1F3A"/></svg>};
+  return qq{<svg class="$cls" viewBox="0 0 64 64" role="img" aria-label="$EDITORIAL"><rect width="64" height="64" rx="8" fill="#0B1F3A"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#28357A" stroke-width="2" transform="rotate(45 32 32)"/><g class="ir-avatar__turn"><rect x="19" y="19" width="26" height="26" rx="1.5" fill="none" stroke="#A5ACF6" stroke-width="2" stroke-dasharray="20 6"/></g><rect x="27" y="27" width="10" height="10" rx="1" fill="#A5ACF6" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="2" fill="#0B1F3A"/></svg>};
 }
 
 sub byline {
@@ -604,8 +606,8 @@ sub render_body {
       if ($c =~ /^formula-card/) { push @out, c_quote($next, 'formula'); $i += 2; next; }
       if ($c =~ /^fact-card amber/) { push @out, c_quote($next, 'fact'); $i += 2; next; }
       if ($c =~ /^callout-warning amber|^checklist amber/) {
-        # Чек-лист -> amber-плашка; цитата "что нельзя делать" -> красный блок ir-stop
-        # (внутри amber-плашки, если есть чек-лист, иначе отдельно).
+        # Чек-лист -> alert-плашка; цитата "что нельзя делать" -> красный блок ir-stop
+        # (внутри alert-плашки, если есть чек-лист, иначе отдельно).
         my ($lists, $stops) = ('', '');
         my $j = $i + 1;
         while ($j < @$blocks && $blocks->[$j]{t} =~ /^(ul|ol|quote)$/) {
@@ -615,7 +617,7 @@ sub render_body {
           } else { $lists .= c_check($x, $x->{t} eq 'ol'); }
           $j++;
         }
-        push @out, $lists ne '' ? qq{<div class="ir-amber">\n$lists$stops</div>\n} : $stops;
+        push @out, $lists ne '' ? qq{<div class="ir-alertbox">\n$lists$stops</div>\n} : $stops;
         $i = $j; next;
       }
       if ($c =~ /^callout/) { push @out, c_quote($next); $i += 2; next; }
@@ -703,7 +705,7 @@ HTML
 }
 
 sub logo_mark {
-  return q{<svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="6" fill="#0B1F3A"/><path d="M16 5.5 7.5 9v6.2c0 5.3 3.6 9.4 8.5 11.3 4.9-1.9 8.5-6 8.5-11.3V9Z" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-linejoin="round"/><circle cx="15" cy="14.5" r="3.6" fill="none" stroke="#0EA5A4" stroke-width="2"/><path d="m17.7 17.2 3 3" stroke="#0EA5A4" stroke-width="2" stroke-linecap="round"/></svg>};
+  return q{<svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="6" fill="#4338CA"/><path d="M16 5.5 7.5 9v6.2c0 5.3 3.6 9.4 8.5 11.3 4.9-1.9 8.5-6 8.5-11.3V9Z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/><circle cx="15" cy="14.5" r="3.6" fill="none" stroke="#FFFFFF" stroke-width="2"/><path d="m17.7 17.2 3 3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>};
 }
 
 sub footer_html {
@@ -731,7 +733,7 @@ $guides_li
 <p class="ir-footer__title">О проекте</p>
 <ul>
 <li><a href="${root}o-proekte/">О проекте</a></li>
-<li><a href="${root}redakciya/">Редакция</a></li>
+<li><a href="${root}redakciya/">Аналитическая группа</a></li>
 <li><a href="${root}redakcionnaya-politika/">Редакционная политика</a></li>
 <li><a href="${root}glossarij/">Глоссарий</a></li>
 </ul>
@@ -870,9 +872,9 @@ for my $page (@PAGES) {
     '<meta property="og:title" content="' . attr($title) . "\">\n",
     '<meta property="og:description" content="' . attr($desc) . "\">\n",
     "<meta property=\"og:url\" content=\"$canonical\">\n<meta property=\"og:image\" content=\"$OG_IMAGE\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n",
-    "<meta name=\"theme-color\" content=\"#0B1F3A\">\n",
+    "<meta name=\"theme-color\" content=\"#3730A3\">\n",
     "<link rel=\"icon\" href=\"${root}favicon.ico\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"${root}favicon.svg\" type=\"image/svg+xml\">\n<link rel=\"apple-touch-icon\" href=\"${root}apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"${root}site.webmanifest\">\n",
-    "<link rel=\"preload\" href=\"${root}assets/fonts/inter-cyrillic.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n",
+    "<link rel=\"preload\" href=\"${root}assets/fonts/ibm-plex-sans-cyrillic-400-normal.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n",
     "<link rel=\"stylesheet\" href=\"${root}assets/css/styles.css\">\n",
     "<script type=\"application/ld+json\">\n$ld</script>\n",
     "</head>\n<body id=\"top\">\n",

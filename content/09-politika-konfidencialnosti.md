@@ -44,7 +44,7 @@ Breadcrumbs: Рейтинг > Политика конфиденциальнос�
 
 ## Права пользователя
 
-Пользователь может запросить сведения о своих данных, их уточнение или удаление по статье 14 152-ФЗ. Запрос направляется на почту [editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
+Пользователь может запросить сведения о своих данных, их уточнение или удаление по статье 14 152-ФЗ. Запрос направляется на почту [research@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:research@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
 
 Редакция отвечает на запрос в течение 10 рабочих дней. Ответ содержит перечень данных или подтверждение их удаления.
 

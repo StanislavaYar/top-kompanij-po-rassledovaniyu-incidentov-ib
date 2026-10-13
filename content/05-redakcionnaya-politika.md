@@ -45,7 +45,7 @@ Breadcrumbs: Рейтинг > Редакционная политика
 
 ## Исправления и обновления
 
-Редакция исправляет фактическую ошибку в течение 10 рабочих дней после получения подтверждения. Сообщить об ошибке можно на почту [editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
+Редакция исправляет фактическую ошибку в течение 10 рабочих дней после получения подтверждения. Сообщить об ошибке можно на почту [research@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:research@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
 
 Каждое исправление попадает в историю изменений на странице [методологии](../metodologiya/). Запись содержит дату и описание изменения.
 

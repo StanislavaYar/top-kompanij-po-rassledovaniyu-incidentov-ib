@@ -10,7 +10,7 @@ Breadcrumbs: Рейтинг > Контакты
 
 # Контакты редакции
 
-Редакция рейтинга отвечает на письма в течение 3 рабочих дней. Почта: [editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
+Аналитическая группа рейтинга отвечает на письма в течение 3 рабочих дней. Почта: [research@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:research@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
 
 <!-- 3 карточки сценариев с иконками -->
 

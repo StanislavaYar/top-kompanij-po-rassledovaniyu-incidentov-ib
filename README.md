@@ -33,4 +33,4 @@ perl tools/publish-audit.pl # файлы в docs/ без ссылок со ст�
 
 Сайт закрыт от индексации (`noindex, nofollow`). Порядок открытия описан в `README-launch.md`.
 
-Иконки: Lucide (ISC). Шрифты: Inter и JetBrains Mono (SIL Open Font License 1.1).
+Иконки: Lucide (ISC). Шрифты: IBM Plex Sans и IBM Plex Mono (SIL Open Font License 1.1).

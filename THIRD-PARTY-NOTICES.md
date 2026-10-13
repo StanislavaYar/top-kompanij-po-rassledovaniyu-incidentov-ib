@@ -26,10 +26,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ```
 
-## Шрифты Inter и JetBrains Mono
+## Шрифты IBM Plex Sans и IBM Plex Mono
 
-Файлы шрифтов лежат в `assets/fonts/`, лицензия SIL Open Font License 1.1.
-Полный текст лицензии: `assets/fonts/OFL-LICENSE.txt` (публикуется вместе со шрифтами, как требует OFL).
+Файлы шрифтов лежат в `assets/fonts/` (woff2, кириллица и латиница), лицензия SIL Open Font License 1.1.
+Copyright 2017-2019 IBM Corp. Полный текст лицензии: `assets/fonts/OFL-LICENSE.txt` (публикуется вместе со шрифтами, как требует OFL).
 
-- Inter: https://github.com/rsms/inter
-- JetBrains Mono: https://github.com/JetBrains/JetBrainsMono
+- IBM Plex: https://github.com/IBM/plex
+- Файлы woff2: пакеты @fontsource/ibm-plex-sans 5.2.8 и @fontsource/ibm-plex-mono 5.2.7

@@ -56,6 +56,6 @@ Breadcrumbs: Рейтинг > Добавить компанию
 
 ## Форма заявки
 
-<!-- form: method="post" action="mailto:editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com" enctype="text/plain"; поля: Название компании*, Сайт*, Страница услуги*, Email*, Комментарий; кнопка "Отправить заявку" -->
+<!-- form: method="post" action="mailto:research@top-kompanij-po-rassledovaniyu-incidentov-ib.com" enctype="text/plain"; поля: Название компании*, Сайт*, Страница услуги*, Email*, Комментарий; кнопка "Отправить заявку" -->
 
-Отправляя заявку, вы соглашаетесь с [политикой конфиденциальности](../politika-konfidencialnosti/). Заявку также можно отправить на почту [editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
+Отправляя заявку, вы соглашаетесь с [политикой конфиденциальности](../politika-konfidencialnosti/). Заявку также можно отправить на почту [research@top-kompanij-po-rassledovaniyu-incidentov-ib.com](mailto:research@top-kompanij-po-rassledovaniyu-incidentov-ib.com).
