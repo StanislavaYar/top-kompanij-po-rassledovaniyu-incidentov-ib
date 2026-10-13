@@ -6,7 +6,7 @@ source "$(dirname "$0")/paths.sh"
 cd "$SITE_DIR"
 P="$(cygpath -w /tmp/chrome-ir-gen)"
 shot() { "$CHROME" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --force-device-scale-factor=1 --user-data-dir="$P" \
-  --window-size="$2,$3" --virtual-time-budget=3000 --screenshot="$(cygpath -w "$4")" "$1" >/dev/null 2>&1; }
+  --window-size="$2,$3" --virtual-time-budget=3000 --screenshot="$(cygpath -w "$(realpath -m "$4")")" "$1" >/dev/null 2>&1; }
 ICON="file:///$(cygpath -m "$SITE_DIR/tools/gen/icon.html")"
 shot "$ICON?s=180" 180 180 apple-touch-icon.png
 shot "$ICON?s=192" 192 192 icon-192.png

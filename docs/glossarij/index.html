@@ -62,7 +62,7 @@
       {
          "@id" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#webpage",
          "@type" : "WebPage",
-         "dateModified" : "2026-10-12",
+         "dateModified" : "2026-10-20",
          "description" : "36 терминов расследования инцидентов ИБ: от атрибуции и DFIR до цепочки хранения доказательств и эксфильтрации. Короткие определения с примерами.",
          "inLanguage" : "ru",
          "isPartOf" : {
@@ -113,6 +113,12 @@
             },
             {
                "@type" : "DefinedTerm",
+               "description" : "Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.",
+               "name" : "Веб-шелл",
+               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#veb-shell"
+            },
+            {
+               "@type" : "DefinedTerm",
                "description" : "Вектор атаки - это путь, по которому злоумышленник проник в инфраструктуру: фишинговое письмо, уязвимый внешний сервис, украденный пароль. Установление вектора атаки входит в обязательный результат любого расследования.",
                "name" : "Вектор атаки",
                "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#vektor-ataki"
@@ -122,12 +128,6 @@
                "description" : "Вредоносное программное обеспечение - это программа, которая выполняет действия злоумышленника: шифрует файлы, крадет данные или дает удаленный доступ. Анализ ВПО показывает возможности атакующего и индикаторы для поиска заражения.",
                "name" : "Вредоносное программное обеспечение (ВПО)",
                "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#vredonosnoe-programmnoe-obespechenie-vpo"
-            },
-            {
-               "@type" : "DefinedTerm",
-               "description" : "Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.",
-               "name" : "Веб-шелл",
-               "url" : "https://top-kompanij-po-rassledovaniyu-incidentov-ib.com/glossarij/#veb-shell"
             },
             {
                "@type" : "DefinedTerm",
@@ -322,7 +322,7 @@
 }
 </script>
 </head>
-<body>
+<body id="top">
 <a class="ir-skip" href="#main">Перейти к содержанию</a>
 <header class="ir-header" role="banner">
 <div class="ir-wrap ir-header__in">
@@ -355,22 +355,29 @@
 <header class="ir-intro">
 <h1>Глоссарий: термины расследования инцидентов ИБ</h1>
 <div class="ir-byline">
-<div class="ir-byline__who"><svg class="ir-avatar" viewBox="0 0 64 64" role="img" aria-label="Редакция рейтинга"><rect width="64" height="64" rx="8" fill="#0B1F3A"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#1E3A5F" stroke-width="2" transform="rotate(45 32 32)"/><g class="ir-avatar__turn"><rect x="19" y="19" width="26" height="26" rx="1.5" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-dasharray="20 6"/></g><rect x="27" y="27" width="10" height="10" rx="1" fill="#0EA5A4" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="2" fill="#0B1F3A"/></svg><div><a class="ir-byline__name" href="../redakciya/">Редакция рейтинга</a><br><span class="ir-byline__date">Обновлено: <time datetime="2026-10-12">12.10.2026</time></span></div></div>
+<div class="ir-byline__who"><svg class="ir-avatar" viewBox="0 0 64 64" role="img" aria-label="Редакция рейтинга"><rect width="64" height="64" rx="8" fill="#0B1F3A"/><rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#1E3A5F" stroke-width="2" transform="rotate(45 32 32)"/><g class="ir-avatar__turn"><rect x="19" y="19" width="26" height="26" rx="1.5" fill="none" stroke="#0EA5A4" stroke-width="2" stroke-dasharray="20 6"/></g><rect x="27" y="27" width="10" height="10" rx="1" fill="#0EA5A4" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="2" fill="#0B1F3A"/></svg><div><a class="ir-byline__name" href="../redakciya/">Редакция рейтинга</a><br><span class="ir-byline__date">Обновлено: <time datetime="2026-10-20">20.10.2026</time></span></div></div>
 </div>
 <nav aria-label="Алфавитный указатель"><ul class="ir-az">
-<li><a href="#atribuciya">А</a></li><li><a href="#bekdor">Б</a></li><li><a href="#vektor-ataki">В</a></li><li><a href="#gossopka">Г</a></li><li><a href="#damp-pamyati">Д</a></li><li><a href="#zakreplenie">З</a></li><li><a href="#indikatory-komprometacii-ioc">И</a></li><li><a href="#kompyuternaya-kriminalistika">К</a></li><li><a href="#nkcki">Н</a></li><li><a href="#obraz-diska">О</a></li><li><a href="#reagirovanie-na-incidenty">Р</a></li><li><a href="#sobytie-ib">С</a></li><li><a href="#tajmlajn-ataki">Т</a></li><li><a href="#utechka-personalnyh-dannyh">У</a></li><li><a href="#hesh-summa">Х</a></li><li><a href="#cepochka-hraneniya-dokazatelstv">Ц</a></li><li><a href="#shifrovalshchik">Ш</a></li><li><a href="#eksfiltraciya">Э</a></li><li><a href="#apt">A</a></li><li><a href="#csirt">C</a></li><li><a href="#dfir">D</a></li><li><a href="#edr">E</a></li><li><a href="#mitre-att-ck">M</a></li><li><a href="#nta">N</a></li><li><a href="#siem">S</a></li><li><a href="#threat-intelligence">T</a></li><li><a href="#xdr">X</a></li>
+<li><a href="#bukva-a">А</a></li><li><a href="#bukva-b">Б</a></li><li><a href="#bukva-v">В</a></li><li><a href="#bukva-g">Г</a></li><li><a href="#bukva-d">Д</a></li><li><a href="#bukva-z">З</a></li><li><a href="#bukva-i">И</a></li><li><a href="#bukva-k">К</a></li><li><a href="#bukva-n">Н</a></li><li><a href="#bukva-o">О</a></li><li><a href="#bukva-r">Р</a></li><li><a href="#bukva-s">С</a></li><li><a href="#bukva-t">Т</a></li><li><a href="#bukva-u">У</a></li><li><a href="#bukva-h">Х</a></li><li><a href="#bukva-c">Ц</a></li><li><a href="#bukva-sh">Ш</a></li><li><a href="#bukva-e">Э</a></li><li><a href="#bukva-lat-a">A</a></li><li><a href="#bukva-lat-c">C</a></li><li><a href="#bukva-lat-d">D</a></li><li><a href="#bukva-lat-e">E</a></li><li><a href="#bukva-lat-m">M</a></li><li><a href="#bukva-lat-n">N</a></li><li><a href="#bukva-lat-s">S</a></li><li><a href="#bukva-lat-t">T</a></li><li><a href="#bukva-lat-x">X</a></li>
 </ul></nav>
 <p class="ir-lead">Глоссарий объясняет 36 терминов, которые встречаются в отчетах о расследовании инцидентов ИБ и в договорах с подрядчиками. Определения опираются на <a href="https://files.stroyinf.ru/Index/79/79276.htm" target="_blank" rel="noopener">ГОСТ Р 59712-2022</a>, <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" target="_blank" rel="noopener">NIST SP 800-61</a> и <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank" rel="noopener">152-ФЗ</a>.</p>
 </header>
 <section class="ir-sec" id="russkie-terminy" aria-labelledby="russkie-terminy-h">
 <h2 id="russkie-terminy-h">Русские термины</h2>
+<p class="ir-letter" id="bukva-a">А</p>
 <div class="ir-term" id="atribuciya">
 <h3>Атрибуция</h3>
 <p>Атрибуция - это этап анализа, который связывает инцидент с известной группой злоумышленников по инструментам и техникам атаки. Атрибуция помогает предсказать следующие шаги атакующего и закрыть его типовые каналы входа.</p>
 </div>
+<p class="ir-letter" id="bukva-b">Б</p>
 <div class="ir-term" id="bekdor">
 <h3>Бэкдор</h3>
 <p>Бэкдор - это скрытый механизм доступа, который злоумышленник оставляет в системе для повторного входа. Поиск бэкдоров входит в оценку масштаба инцидента перед восстановлением систем.</p>
+</div>
+<p class="ir-letter" id="bukva-v">В</p>
+<div class="ir-term" id="veb-shell">
+<h3>Веб-шелл</h3>
+<p>Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.</p>
 </div>
 <div class="ir-term" id="vektor-ataki">
 <h3>Вектор атаки</h3>
@@ -380,22 +387,22 @@
 <h3>Вредоносное программное обеспечение (ВПО)</h3>
 <p>Вредоносное программное обеспечение - это программа, которая выполняет действия злоумышленника: шифрует файлы, крадет данные или дает удаленный доступ. Анализ ВПО показывает возможности атакующего и индикаторы для поиска заражения.</p>
 </div>
-<div class="ir-term" id="veb-shell">
-<h3>Веб-шелл</h3>
-<p>Веб-шелл - это вредоносный скрипт на веб-сервере, который дает злоумышленнику удаленное управление через браузер. Веб-шелл часто остается после устранения исходной уязвимости сайта.</p>
-</div>
+<p class="ir-letter" id="bukva-g">Г</p>
 <div class="ir-term" id="gossopka">
 <h3>ГосСОПКА</h3>
 <p>ГосСОПКА - это государственная система обнаружения, предупреждения и ликвидации последствий компьютерных атак на информационные ресурсы РФ. Субъекты КИИ передают сведения об инцидентах в ГосСОПКА через НКЦКИ.</p>
 </div>
+<p class="ir-letter" id="bukva-d">Д</p>
 <div class="ir-term" id="damp-pamyati">
 <h3>Дамп памяти</h3>
 <p>Дамп памяти - это копия содержимого оперативной памяти компьютера на момент снятия. Дамп памяти сохраняет запущенные процессы, сетевые соединения и следы бесфайлового ВПО, которые исчезают при перезагрузке.</p>
 </div>
+<p class="ir-letter" id="bukva-z">З</p>
 <div class="ir-term" id="zakreplenie">
 <h3>Закрепление</h3>
 <p>Закрепление - это действия злоумышленника, которые сохраняют доступ после перезагрузки или смены паролей: новые учетные записи, службы, задачи планировщика. Не найденное закрепление приводит к повторной атаке.</p>
 </div>
+<p class="ir-letter" id="bukva-i">И</p>
 <div class="ir-term" id="indikatory-komprometacii-ioc">
 <h3>Индикаторы компрометации (IoC)</h3>
 <p>Индикаторы компрометации - это технические признаки атаки: хэши вредоносных файлов, IP-адреса и домены серверов управления. Отчет о расследовании передает IoC в SIEM и EDR для поиска заражения на других узлах.</p>
@@ -404,6 +411,7 @@
 <h3>Инцидент ИБ</h3>
 <p>Инцидент ИБ - это событие или серия событий, которые нарушают конфиденциальность, целостность или доступность информации. Инцидент ИБ требует реагирования, а иногда и уведомления регулятора.</p>
 </div>
+<p class="ir-letter" id="bukva-k">К</p>
 <div class="ir-term" id="kompyuternaya-kriminalistika">
 <h3>Компьютерная криминалистика</h3>
 <p>Компьютерная криминалистика - это дисциплина, которая собирает и исследует цифровые доказательства так, чтобы их можно было использовать в суде. Синонимы: форензика, цифровая криминалистика. Подробнее в гайде <a href="../kompyuternaya-kriminalistika/">Компьютерная криминалистика</a>.</p>
@@ -416,14 +424,17 @@
 <h3>Критическая информационная инфраструктура (КИИ)</h3>
 <p>Критическая информационная инфраструктура - это информационные системы и сети организаций в энергетике, связи, финансах, здравоохранении и других сферах из <a href="https://www.consultant.ru/document/cons_doc_LAW_220885/" target="_blank" rel="noopener">187-ФЗ</a>. Субъекты КИИ обязаны информировать НКЦКИ о компьютерных инцидентах.</p>
 </div>
+<p class="ir-letter" id="bukva-n">Н</p>
 <div class="ir-term" id="nkcki">
 <h3>НКЦКИ</h3>
 <p>Национальный координационный центр по компьютерным инцидентам (НКЦКИ) - это центр ФСБ России, который принимает сведения об инцидентах от субъектов КИИ. Приказ ФСБ № 282 устанавливает срок информирования 3 часа для значимых объектов и 24 часа для иных.</p>
 </div>
+<p class="ir-letter" id="bukva-o">О</p>
 <div class="ir-term" id="obraz-diska">
 <h3>Образ диска</h3>
 <p>Образ диска - это побитовая копия носителя, которая сохраняет файлы, удаленные данные и служебные структуры файловой системы. Эксперт исследует образ диска, а оригинал остается неизменным.</p>
 </div>
+<p class="ir-letter" id="bukva-r">Р</p>
 <div class="ir-term" id="reagirovanie-na-incidenty">
 <h3>Реагирование на инциденты</h3>
 <p>Реагирование на инциденты - это комплекс действий, который останавливает атаку, ограничивает ущерб и восстанавливает работу систем. Реагирование идет параллельно с расследованием, но решает другую задачу.</p>
@@ -432,10 +443,12 @@
 <h3>Ретейнер</h3>
 <p>Ретейнер (Incident Response Retainer) - это договор с подрядчиком, который резервирует часы экспертов и фиксирует срок начала работ. По подписке Солар и BI.ZONE начинают работы до 2 часов после обращения.</p>
 </div>
+<p class="ir-letter" id="bukva-s">С</p>
 <div class="ir-term" id="sobytie-ib">
 <h3>Событие ИБ</h3>
 <p>Событие ИБ - это зафиксированная активность в информационной системе, которая может указывать на проблему безопасности. Событие ИБ становится инцидентом после подтверждения нарушения.</p>
 </div>
+<p class="ir-letter" id="bukva-t">Т</p>
 <div class="ir-term" id="tajmlajn-ataki">
 <h3>Таймлайн атаки</h3>
 <p>Таймлайн атаки - это хронология действий злоумышленника от первого проникновения до обнаружения. Таймлайн собирается из журналов, событий EDR, изменений файловой системы и сетевых соединений.</p>
@@ -444,22 +457,27 @@
 <h3>Триаж</h3>
 <p>Триаж - это первичная оценка инцидента, которая определяет затронутые системы, данные под угрозой и срочность реагирования. Триаж задает приоритеты для команды в первые часы работы.</p>
 </div>
+<p class="ir-letter" id="bukva-u">У</p>
 <div class="ir-term" id="utechka-personalnyh-dannyh">
 <h3>Утечка персональных данных</h3>
 <p>Утечка персональных данных - это неправомерная передача или распространение персональных данных. Оператор уведомляет Роскомнадзор об утечке в течение 24 часов, о результатах расследования в течение 72 часов. Подробнее в гайде <a href="../utechka-personalnyh-dannyh-uvedomlenie-rkn/">Утечка персональных данных</a>.</p>
 </div>
+<p class="ir-letter" id="bukva-h">Х</p>
 <div class="ir-term" id="hesh-summa">
 <h3>Хэш-сумма</h3>
 <p>Хэш-сумма - это короткое значение, которое вычисляется из содержимого файла и меняется при любом изменении данных. Хэш-сумма доказывает, что доказательство не изменялось после сбора.</p>
 </div>
+<p class="ir-letter" id="bukva-c">Ц</p>
 <div class="ir-term" id="cepochka-hraneniya-dokazatelstv">
 <h3>Цепочка хранения доказательств</h3>
 <p>Цепочка хранения доказательств - это документ, который фиксирует, кто, когда и куда передавал носитель с цифровыми доказательствами. Цепочка хранения сохраняет юридическую силу улик в суде.</p>
 </div>
+<p class="ir-letter" id="bukva-sh">Ш</p>
 <div class="ir-term" id="shifrovalshchik">
 <h3>Шифровальщик</h3>
 <p>Шифровальщик - это вредоносная программа, которая шифрует файлы и требует выкуп за ключ расшифровки. Расследование атаки шифровальщика проверяет, выгрузили ли злоумышленники данные до шифрования.</p>
 </div>
+<p class="ir-letter" id="bukva-e">Э</p>
 <div class="ir-term" id="eksfiltraciya">
 <h3>Эксфильтрация</h3>
 <p>Эксфильтрация - это выгрузка данных из инфраструктуры компании на ресурсы злоумышленника. Подтверждение эксфильтрации определяет, нужно ли уведомлять Роскомнадзор об утечке.</p>
@@ -467,30 +485,37 @@
 </section>
 <section class="ir-sec" id="anglijskie-terminy-i-abbreviatury" aria-labelledby="anglijskie-terminy-i-abbreviatury-h">
 <h2 id="anglijskie-terminy-i-abbreviatury-h">Английские термины и аббревиатуры</h2>
+<p class="ir-letter" id="bukva-lat-a">A</p>
 <div class="ir-term" id="apt">
 <h3>APT</h3>
 <p>APT (Advanced Persistent Threat) - это группа злоумышленников, которая проводит длительные целевые атаки и долго остается в инфраструктуре незамеченной. По исследованию PT ESC за 2021-2023 годы, 40% расследованных инцидентов связаны с известными APT-группировками (<a href="https://habr.com/ru/articles/774060" target="_blank" rel="noopener">Хабр</a>).</p>
 </div>
+<p class="ir-letter" id="bukva-lat-c">C</p>
 <div class="ir-term" id="csirt">
 <h3>CSIRT</h3>
 <p>CSIRT (Computer Security Incident Response Team) - это команда реагирования на инциденты ИБ внутри организации. CSIRT координирует реагирование и привлекает внешних подрядчиков при сложных атаках.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-d">D</p>
 <div class="ir-term" id="dfir">
 <h3>DFIR</h3>
 <p>DFIR (Digital Forensics and Incident Response) - это сочетание компьютерной криминалистики и реагирования на инциденты в одной услуге. Солар называет свою услугу расследования и реагирования именно DFIR.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-e">E</p>
 <div class="ir-term" id="edr">
 <h3>EDR</h3>
 <p>EDR (Endpoint Detection and Response) - это система, которая записывает события на рабочих станциях и серверах и блокирует подозрительные действия. Данные EDR служат одним из главных источников для таймлайна атаки.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-m">M</p>
 <div class="ir-term" id="mitre-att-ck">
 <h3>MITRE ATT&amp;CK</h3>
 <p>MITRE ATT&amp;CK - это открытая база тактик и техник злоумышленников, которую используют в отчетах о расследовании. Привязка действий атакующего к техникам ATT&amp;CK делает отчеты разных компаний сопоставимыми.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-n">N</p>
 <div class="ir-term" id="nta">
 <h3>NTA</h3>
 <p>NTA (Network Traffic Analysis) - это система анализа сетевого трафика, которая выявляет аномальные соединения и выгрузку данных. Записи NTA помогают подтвердить или опровергнуть эксфильтрацию.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-s">S</p>
 <div class="ir-term" id="siem">
 <h3>SIEM</h3>
 <p>SIEM (Security Information and Event Management) - это система, которая собирает и сопоставляет события безопасности со всей инфраструктуры. Сигнал SIEM часто запускает расследование.</p>
@@ -503,10 +528,12 @@
 <h3>SOC</h3>
 <p>SOC (Security Operations Center) - это центр мониторинга, который круглосуточно выявляет инциденты ИБ. SOC обнаруживает атаку, а глубокое расследование чаще проводит отдельная команда DFIR.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-t">T</p>
 <div class="ir-term" id="threat-intelligence">
 <h3>Threat Intelligence</h3>
 <p>Threat Intelligence - это данные о группировках, их инфраструктуре и техниках, которые помогают обнаружить и атрибутировать атаку. Солар и Лаборатория Касперского используют собственные базы Threat Intelligence в расследованиях.</p>
 </div>
+<p class="ir-letter" id="bukva-lat-x">X</p>
 <div class="ir-term" id="xdr">
 <h3>XDR</h3>
 <p>XDR (Extended Detection and Response) - это развитие EDR, которое объединяет данные с рабочих станций, сети, почты и облака. XDR дает расследованию единую картину событий из разных источников.</p>
@@ -551,15 +578,15 @@
 <li><a href="../dobavit-kompaniyu/">Добавить компанию</a></li>
 <li><a href="../politika-konfidencialnosti/">Политика конфиденциальности</a></li>
 </ul>
-<p class="ir-footer__note">Иконки: <a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>, лицензия ISC. Шрифты: Inter и JetBrains Mono, лицензия <a href="../assets/fonts/OFL-LICENSE.txt">SIL Open Font License 1.1</a>.</p>
 </div>
 </div>
 <div class="ir-footer__bottom">
-<p>Рейтинг IR-компаний, 2026. Данные проверены 12.10.2026.</p>
+<p>Рейтинг IR-компаний, 2026. Данные проверены 20.10.2026.</p>
 <p>Логотипы и названия компаний являются товарными знаками их владельцев.</p>
 </div>
 </div>
 </footer>
+<a class="ir-totop" href="#top" aria-label="Наверх"><svg class="ir-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a>
 <script src="../assets/js/ui.js" defer></script>
 </body>
 </html>

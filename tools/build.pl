@@ -11,8 +11,8 @@ binmode STDOUT, ":encoding(UTF-8)";
 binmode STDERR, ":encoding(UTF-8)";
 
 my $DOMAIN    = 'https://top-kompanij-po-rassledovaniyu-incidentov-ib.com';
-my $DATE      = '2026-10-12';
-my $DATE_RU   = '12.10.2026';
+my $DATE      = '2026-10-20';
+my $DATE_RU   = '20.10.2026';
 my $SITE_NAME = 'Рейтинг IR-компаний';
 my $EDITORIAL = 'Редакция рейтинга';
 my $EMAIL     = 'editor@top-kompanij-po-rassledovaniyu-incidentov-ib.com';
@@ -103,6 +103,7 @@ my %ICON = (
   'message-square'=> '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
   'plus-square'   => '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/>',
   'target'        => '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  'info'          => '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
 );
 sub icon {
   my ($name, $cls) = @_;
@@ -162,7 +163,11 @@ sub inl {
   $s =~ s/\*\*(.+?)\*\*/<strong>$1<\/strong>/g;
   return $s;
 }
-sub na_class { my ($v) = @_; return ($v =~ /^не опубликовано$/) ? ' class="ir-na"' : ''; }
+# "нет в открытом доступе": компания не публикует параметр на сайте
+my $NA = 'нет в открытом доступе';
+sub is_na { my ($v) = @_; return index($v, $NA) == 0; }
+sub na_class { my ($v) = @_; return $v eq $NA ? ' class="ir-na"' : ''; }
+sub na_mark { my ($html) = @_; return icon('info', 'ir-ico--na') . $html; }
 
 # ---------- Markdown parsing ----------
 sub parse_md {
@@ -251,7 +256,8 @@ sub c_table {
       my $v = $r->[$ci];
       my $cell = $o{cell} ? $o{cell}->($ci, $v, $r) : inl($v);
       my $dl = ($o{stack} && !$o{nohead}) ? ' data-label="' . attr(plain($b->{head}[$ci])) . '"' : '';
-      my $na = ($v eq 'не опубликовано') ? ' class="ir-na"' : '';
+      my $na = is_na($v) ? ' class="ir-na"' : '';
+      $cell = na_mark($cell) if is_na($v);
       $h .= "<td$dl$na>$cell</td>";
     }
     $h .= "</tr>\n";
@@ -433,7 +439,10 @@ sub c_card {
     if ($b->{t} eq 'c') { next; }
     if ($b->{t} eq 'table') {
       $attrs = qq{<dl class="ir-attrs">\n};
-      for my $r (@{ $b->{rows} }) { $attrs .= '<div><dt>' . esc($r->[0]) . '</dt><dd' . na_class($r->[1]) . '>' . inl($r->[1]) . "</dd></div>\n"; }
+      for my $r (@{ $b->{rows} }) {
+        my $na = is_na($r->[1]);
+        $attrs .= '<div><dt>' . esc($r->[0]) . '</dt><dd' . ($na ? ' class="ir-na"' : '') . '>' . ($na ? na_mark(inl($r->[1])) : inl($r->[1])) . "</dd></div>\n";
+      }
       $attrs .= "</dl>\n"; next;
     }
     if ($b->{t} eq 'ul') {
@@ -461,7 +470,7 @@ sub c_card {
 <article class="ir-card" id="$slug">
 <header class="ir-card__head"><h3><span class="ir-card__rank">$rank</span>@{[ esc($name) ]}</h3>$badge</header>
 <div class="ir-card__top">
-<figure class="ir-card__shot"><img src="$img" width="1200" height="750" alt="@{[ attr($alt) ]}" loading="lazy" decoding="async"></figure>
+<figure class="ir-card__shot"><img src="$img" width="1200" height="623" alt="@{[ attr($alt) ]}" loading="lazy" decoding="async"></figure>
 <div class="ir-card__lede">
 $def</div>
 </div>
@@ -489,11 +498,12 @@ sub render_body {
   my $close_sec = sub { if ($in_sec) { push @out, "</section>\n"; $in_sec = 0; } };
   my $first_para_done = 0;
 
-  # Предварительный проход: H3 глоссария для алфавитного указателя
+  # Предварительный проход: буквы глоссария для указателя и разделителей
   my @letters;
+  my $cur_letter = '';
   if ($kind eq 'glossary') {
     my %seen;
-    for my $b (@$blocks) { next unless $b->{t} eq 'h3'; my $l = uc substr($b->{text}, 0, 1); next if $seen{$l}++; push @letters, [$l, slugify($b->{text})]; }
+    for my $b (@$blocks) { next unless $b->{t} eq 'h3'; my $l = uc substr($b->{text}, 0, 1); next if $seen{$l}++; push @letters, [$l, ($l =~ /^[A-Z]$/ ? 'bukva-lat-' : 'bukva-') . (slugify($l) || 'x')]; }
   }
 
   my $i = 0;
@@ -532,6 +542,12 @@ sub render_body {
       my $id = $uid->(slugify($b->{text}));
       if ($kind eq 'glossary') {
         my $p = $blocks->[$i + 1];
+        my $l = uc substr($b->{text}, 0, 1);
+        if ($l ne $cur_letter) {
+          $cur_letter = $l;
+          my ($lt) = grep { $_->[0] eq $l } @letters;
+          push @out, qq{<p class="ir-letter" id="$lt->[1]">$l</p>\n};
+        }
         push @out, qq{<div class="ir-term" id="$id">\n<h3>} . inl($b->{text}) . "</h3>\n" . c_para($p) . "</div>\n";
         $i += 2; next;
       }
@@ -588,16 +604,19 @@ sub render_body {
       if ($c =~ /^formula-card/) { push @out, c_quote($next, 'formula'); $i += 2; next; }
       if ($c =~ /^fact-card amber/) { push @out, c_quote($next, 'fact'); $i += 2; next; }
       if ($c =~ /^callout-warning amber|^checklist amber/) {
-        my $h = qq{<div class="ir-amber">\n};
+        # Чек-лист -> amber-плашка; цитата "что нельзя делать" -> красный блок ir-stop
+        # (внутри amber-плашки, если есть чек-лист, иначе отдельно).
+        my ($lists, $stops) = ('', '');
         my $j = $i + 1;
         while ($j < @$blocks && $blocks->[$j]{t} =~ /^(ul|ol|quote)$/) {
           my $x = $blocks->[$j];
           if ($x->{t} eq 'quote') {
-            $h .= qq{<div class="ir-amber__stop">} . icon('octagon-x') . '<div>' . join('', map { '<p>' . inl($_) . '</p>' } @{ $x->{paras} }) . "</div></div>\n";
-          } else { $h .= c_check($x, $x->{t} eq 'ol'); }
+            $stops .= qq{<div class="ir-stop" role="note">} . icon('octagon-x') . '<div>' . join('', map { '<p>' . inl($_) . '</p>' } @{ $x->{paras} }) . "</div></div>\n";
+          } else { $lists .= c_check($x, $x->{t} eq 'ol'); }
           $j++;
         }
-        push @out, "$h</div>\n"; $i = $j; next;
+        push @out, $lists ne '' ? qq{<div class="ir-amber">\n$lists$stops</div>\n} : $stops;
+        $i = $j; next;
       }
       if ($c =~ /^callout/) { push @out, c_quote($next); $i += 2; next; }
       if ($c =~ /^checklist/) { push @out, c_check($next, $next->{t} eq 'ol'); $i += 2; next; }
@@ -628,7 +647,7 @@ sub render_body {
       }
       my $cls = '';
       if ($intro && !$first_para_done && $h1) { $cls = 'ir-lead'; $first_para_done = 1; }
-      $cls = 'ir-source' if $txt =~ /^Источники?: /;
+      $cls = 'ir-source' if $txt =~ /^Источники?: / || $txt =~ /^Нет в открытом доступе - /;
       push @out, c_para($b, $cls);
       $i++; next;
     }
@@ -725,7 +744,6 @@ $guides_li
 <li><a href="${root}dobavit-kompaniyu/">Добавить компанию</a></li>
 <li><a href="${root}politika-konfidencialnosti/">Политика конфиденциальности</a></li>
 </ul>
-<p class="ir-footer__note">Иконки: <a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>, лицензия ISC. Шрифты: Inter и JetBrains Mono, лицензия <a href="${root}assets/fonts/OFL-LICENSE.txt">SIL Open Font License 1.1</a>.</p>
 </div>
 </div>
 <div class="ir-footer__bottom">
@@ -858,10 +876,11 @@ for my $page (@PAGES) {
     "<link rel=\"preload\" href=\"${root}assets/fonts/inter-cyrillic.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n",
     "<link rel=\"stylesheet\" href=\"${root}assets/css/styles.css\">\n",
     "<script type=\"application/ld+json\">\n$ld</script>\n",
-    "</head>\n<body>\n",
+    "</head>\n<body id=\"top\">\n",
     header_html($root, $nav),
     "<main id=\"main\" class=\"ir-main\">\n$main</main>\n",
     footer_html($root),
+    '<a class="ir-totop" href="#top" aria-label="Наверх">' . icon('arrow-up') . "</a>\n",
     "<script src=\"${root}assets/js/ui.js\" defer></script>\n",
     "</body>\n</html>\n");
 

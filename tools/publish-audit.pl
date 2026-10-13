@@ -4,7 +4,7 @@ use strict; use warnings; use utf8; use File::Find; use File::Basename; use Cwd 
 binmode STDOUT, ":encoding(UTF-8)";
 chdir($ENV{PUBLIC_DIR} // "docs") or die "no docs/";
 my %used;
-my @allowed = qw(favicon.ico favicon.svg apple-touch-icon.png icon-192.png icon-512.png robots.txt sitemap.xml site.webmanifest README-launch.md .nojekyll 404.html index.html);
+my @allowed = qw(favicon.ico favicon.svg apple-touch-icon.png icon-192.png icon-512.png robots.txt sitemap.xml site.webmanifest README-launch.md .nojekyll 404.html index.html assets/fonts/OFL-LICENSE.txt);
 $used{$_} = 'служебный' for @allowed;
 my @pages = ('index.html', glob('*/index.html'), '404.html');
 sub mark { my ($from, $ref) = @_; $ref =~ s{^https://top-kompanij-po-rassledovaniyu-incidentov-ib\.com/}{/}; return if $ref =~ /^(https?:|mailto:|#|data:)/; $ref =~ s/[?#].*$//; return if $ref eq '';

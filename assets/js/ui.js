@@ -29,3 +29,19 @@
     a.addEventListener('click', function () { var d = a.closest('details'); if (d) d.open = false; });
   });
 })();
+// Кнопка "Наверх": видна после прокрутки на высоту экрана. Без JS остается обычной ссылкой на начало страницы.
+(function () {
+  var btn = document.querySelector('.ir-totop');
+  if (!btn) return;
+  document.documentElement.classList.add('ir-js');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var update = function () { btn.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.9); };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  btn.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var skip = document.querySelector('.ir-skip');
+    if (skip) skip.focus({ preventScroll: true });
+  });
+})();

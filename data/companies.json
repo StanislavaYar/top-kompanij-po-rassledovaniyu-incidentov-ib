@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-12",
-  "note": "Значение 'не опубликовано' = параметр не указан на сайте компании. Не заполнять из памяти модели.",
+  "checked_at": "2026-10-20",
+  "note": "Значение 'нет в открытом доступе' = параметр не указан на сайте компании. Не заполнять из памяти модели.",
   "companies": [
     {
       "rank": 1,
@@ -29,11 +29,11 @@
       "name": "F6",
       "url": "https://www.f6.ru/services/incident-response/",
       "response_time": "круглосуточная поддержка",
-      "duration": "не опубликовано",
-      "format": "не опубликовано",
+      "duration": "нет в открытом доступе",
+      "format": "нет в открытом доступе",
       "mode": "круглосуточный мониторинг F6 MXDR и CERT",
       "result": "отчеты и заключения о криминалистическом исследовании",
-      "licenses": "не опубликовано",
+      "licenses": "нет в открытом доступе",
       "price_from": "1,5 млн руб. (реагирование), 300 тыс. руб. (криминалистика)",
       "sources": [
         "https://www.f6.ru/services/incident-response/",
@@ -49,9 +49,9 @@
       "duration": "базовый инцидент до 10 хостов: 100-120 ч работ",
       "format": "удаленно, выезд обсуждается отдельно",
       "mode": "24/7",
-      "result": "не опубликовано",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано, подписка от 250 часов",
+      "result": "нет в открытом доступе",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе, подписка от 250 часов",
       "sources": [
         "https://rt-solar.ru/services/jsoc/digital-forensic-and-incident-response/",
         "https://rt-solar.ru/services/jsoc/incident_response_retainer/"
@@ -63,12 +63,12 @@
       "name": "BI.ZONE",
       "url": "https://bi.zone/catalog/services/incident-response/",
       "response_time": "начало работ до 2 ч (Retainer), в порядке очереди (ad hoc)",
-      "duration": "не опубликовано",
-      "format": "не опубликовано",
+      "duration": "нет в открытом доступе",
+      "format": "нет в открытом доступе",
       "mode": "24/7/365 по Retainer",
-      "result": "не опубликовано",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано, день по Retainer на 30% ниже",
+      "result": "нет в открытом доступе",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе, день по Retainer на 30% ниже",
       "sources": [
         "https://bi.zone/catalog/services/incident-response/"
       ]
@@ -78,13 +78,13 @@
       "slug": "kaspersky",
       "name": "Лаборатория Касперского",
       "url": "https://www.kaspersky.ru/small-to-medium-business-security/services/computer-incident-investigation",
-      "response_time": "не опубликовано",
-      "duration": "не опубликовано",
+      "response_time": "нет в открытом доступе",
+      "duration": "нет в открытом доступе",
       "format": "выезд на место происшествия",
-      "mode": "не опубликовано",
+      "mode": "нет в открытом доступе",
       "result": "цифровые свидетельства, экспертное заключение, отчет со схемой инцидента",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе",
       "sources": [
         "https://www.kaspersky.ru/small-to-medium-business-security/services/computer-incident-investigation"
       ]
@@ -97,10 +97,10 @@
       "response_time": "в течение 24 часов",
       "duration": "от 5 рабочих дней",
       "format": "выезд или удаленный доступ",
-      "mode": "не опубликовано",
+      "mode": "нет в открытом доступе",
       "result": "экспертное заключение по 73-ФЗ",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано, консультация бесплатно",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе, консультация бесплатно",
       "sources": [
         "https://www.rtmtech.ru/services/rassledovanie-intsidentov-is"
       ]
@@ -112,11 +112,11 @@
       "url": "https://soc.credos.ru/uslugi/rassledovanie-intsidentov",
       "response_time": "подключение в течение 4 часов",
       "duration": "предварительный отчет 3-5 рабочих дней, полное расследование 1-4 недели",
-      "format": "не опубликовано",
-      "mode": "не опубликовано",
+      "format": "нет в открытом доступе",
+      "mode": "нет в открытом доступе",
       "result": "отчет, документы для НКЦКИ и Роскомнадзора",
       "licenses": "ФСТЭК (с 2007), ФСБ (с 2009)",
-      "price_from": "не опубликовано",
+      "price_from": "нет в открытом доступе",
       "sources": [
         "https://soc.credos.ru/uslugi/rassledovanie-intsidentov"
       ]
@@ -131,8 +131,8 @@
       "format": "удаленно, выезд в случае особой необходимости",
       "mode": "5/2 с 10:00 до 19:00 мск, формат 24/7 возможен",
       "result": "технический отчет с хронологией, индикаторами компрометации и рекомендациями",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе",
       "sources": [
         "https://ptsecurity.com/services/incident-response/",
         "https://habr.com/ru/articles/856898"
@@ -144,13 +144,13 @@
       "slug": "ussc",
       "name": "УЦСБ",
       "url": "https://sec.ussc.ru/services/incident-investigation",
-      "response_time": "не опубликовано",
-      "duration": "не опубликовано",
-      "format": "не опубликовано",
-      "mode": "не опубликовано",
+      "response_time": "нет в открытом доступе",
+      "duration": "нет в открытом доступе",
+      "format": "нет в открытом доступе",
+      "mode": "нет в открытом доступе",
       "result": "отчет с таймлайном, участниками, рекомендациями и перечнем недостатков защиты",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе",
       "sources": [
         "https://sec.ussc.ru/services/incident-investigation"
       ]
@@ -160,13 +160,13 @@
       "slug": "bastion",
       "name": "Бастион",
       "url": "https://bastion-tech.ru/services/incident-response",
-      "response_time": "не опубликовано",
-      "duration": "не опубликовано",
+      "response_time": "нет в открытом доступе",
+      "duration": "нет в открытом доступе",
       "format": "выезд на объект клиента",
-      "mode": "не опубликовано",
+      "mode": "нет в открытом доступе",
       "result": "отчет с описанием инцидента, принятыми мерами и планом по недопущению повторных инцидентов",
-      "licenses": "не опубликовано",
-      "price_from": "не опубликовано",
+      "licenses": "нет в открытом доступе",
+      "price_from": "нет в открытом доступе",
       "sources": [
         "https://bastion-tech.ru/services/incident-response",
         "https://habr.com/ru/articles/765494",

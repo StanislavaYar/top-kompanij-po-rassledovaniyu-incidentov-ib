@@ -501,3 +501,68 @@ h3 { font-size: 18px; line-height: 26px; }
 }
 .ir-footer__note a { display: inline; padding: 0; text-decoration: underline; }
 .ir-card__spec .ir-chip { white-space: normal; }
+
+/* ---------- Правки 13.10.2026 ---------- */
+/* 1. Шкала доказательств: подписи крупнее и контрастнее */
+.ir-scale__end { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ir-navy); padding: 12px 16px; }
+.ir-scale__end .ir-ico { width: 18px; height: 18px; color: var(--ir-navy); stroke-width: 2.25; }
+
+/* 2. Блок "что нельзя делать": красная плашка (токены error из DESIGN.md) */
+.ir-stop { display: grid; grid-template-columns: 24px 1fr; gap: 10px; margin: 0 0 1rem; padding: 14px 16px; background: #FFDAD6; border: 1px solid #F5B5AE; border-left: 3px solid #BA1A1A; border-radius: var(--ir-r); color: #93000A; }
+.ir-stop .ir-ico { color: #BA1A1A; margin-top: 3px; }
+.ir-stop p { margin: 0; }
+.ir-stop p + p { margin-top: 8px; }
+.ir-stop strong { color: #BA1A1A; }
+.ir-stop a { color: #93000A; }
+.ir-amber .ir-stop { margin: 16px 0 0; }
+
+/* 3. Скриншоты компаний: целиком, единый размер 1200x623, без обрезки */
+.ir-card__shot { height: auto; }
+.ir-card__shot img { width: 100%; height: auto; min-height: 0; aspect-ratio: 1200 / 623; object-fit: contain; object-position: top center; }
+@media (min-width: 1024px) {
+  .ir-card__top { align-items: center; }
+  .ir-card__shot { height: auto; align-self: start; border-right: 1px solid var(--ir-line); }
+  .ir-card__shot img { height: auto; min-height: 0; }
+}
+
+/* 5. Заголовки столбцов таблиц: не меньше текста ячеек, контрастнее */
+.ir-table th { font-family: var(--ir-sans); font-size: 15px; line-height: 21px; font-weight: 600; letter-spacing: 0; color: var(--ir-navy); background: var(--ir-tint); border-bottom: 1px solid #CBD5E1; }
+.ir-rank th { font-size: 13.5px; line-height: 19px; }
+@media (max-width: 767px) { .ir-table--stack td:not(:first-child)::before { font-family: var(--ir-sans); font-size: 13px; font-weight: 600; color: var(--ir-navy); } }
+
+/* 8. Глоссарий: буквы-разделители */
+.ir-letter { margin: 36px 0 0; padding-bottom: 6px; border-bottom: 2px solid var(--ir-navy); font-family: var(--ir-mono); font-size: 32px; line-height: 40px; font-weight: 700; color: var(--ir-navy); }
+.ir-sec > h2 + .ir-letter { margin-top: 8px; }
+
+/* 9. Кнопка "Наверх" */
+.ir-totop { position: fixed; right: 16px; bottom: 16px; z-index: 40; display: grid; place-items: center; width: 44px; height: 44px; background: var(--ir-navy); color: #fff; border-radius: var(--ir-r); box-shadow: 0 2px 6px rgba(11, 31, 58, .25); text-decoration: none; }
+.ir-totop .ir-ico { width: 20px; height: 20px; stroke-width: 2.25; }
+.ir-totop:hover { background: #163257; color: #fff; }
+.ir-totop:active { background: var(--ir-ink); }
+.ir-totop:focus-visible { outline: 2px solid var(--ir-teal-ink); outline-offset: 3px; }
+.ir-js .ir-totop { opacity: 0; transform: translateY(8px); pointer-events: none; }
+.ir-js .ir-totop.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+@media (prefers-reduced-motion: no-preference) { .ir-totop { transition: opacity .2s ease, transform .2s cubic-bezier(.34,1.3,.64,1); } }
+@media (min-width: 768px) { .ir-totop { right: 24px; bottom: 24px; } }
+
+/* 10. "Нет в открытом доступе": иконка-пометка */
+.ir-ico--na { display: inline-block; width: 14px; height: 14px; margin: 0 5px 0 0; vertical-align: -2px; color: var(--ir-muted); }
+
+/* 11. Шкала 0/24/72 часа: стрелки вместо линий */
+.ir-timeline > li::after {
+  left: 0; width: 12px; top: 24px; bottom: 2px; height: auto;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 6 5-6' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") bottom center / 12px 8px no-repeat,
+    linear-gradient(#64748B, #64748B) top center / 2px calc(100% - 2px) no-repeat;
+}
+@media (min-width: 768px) {
+  .ir-timeline > li::after {
+    left: 34px; right: -14px; top: 16px; bottom: auto; width: auto; height: 12px; z-index: 1;
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12'%3E%3Cpath d='M1 1l6 5-6 5' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right center / 8px 12px no-repeat,
+      linear-gradient(#64748B, #64748B) left center / calc(100% - 2px) 2px no-repeat;
+  }
+}
+.ir-timeline > li:last-child::after { display: none; }
+.ir-scale__end { font-family: var(--ir-sans); font-size: 15px; line-height: 22px; letter-spacing: 0; }
+.ir-rank thead th:nth-child(1) { font-family: var(--ir-sans); font-weight: 600; }
